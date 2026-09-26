@@ -18,12 +18,12 @@
 <body class="bg-background font-body-md text-on-surface antialiased">
   
   <header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-    <div class="h-20 w-full px-margin flex items-center justify-between gap-gutter">
+    <div class="h-20 w-full px-4 sm:px-6 md:px-margin flex items-center justify-between gap-2 sm:gap-gutter">
       <a href="index.html" class="flex items-center gap-space-md shrink-0 group">
         <img alt="EcoSmart Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VxnTWcVeBO48LyD2YOdYj6Zkq7S2xj4yOcODQ6aLW-WCrXOuVxUuB7M2O-aU8p0ttdZ4ikQ32bQnTo2FdrMi_1QAMliJTTudpzfWqjEDDFvosE7AxlaIWjtlOs4F-QKn7catXdGLLl9ySII3gKkFrq7Lzxv3hEl7aaLzh19-ZwxS7uh7BrBev5BvygbJyL3ghekbNDSaaQqR_VKZIHKWIEiaRob9Uyp-_S0OnwvJjMv_WRN6CXwQ5uV-J4"/>
         <div class="flex flex-col">
           <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">EcoSmart</span>
-          <span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide uppercase">Digital Green Solutions</span>
+          <span class="hidden sm:inline font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide uppercase">Digital Green Solutions</span>
         </div>
       </a>
       <nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-semibold">
@@ -75,50 +75,50 @@
   <main class="w-full pt-20 bg-background">
     <div class="flex flex-col w-full">
       
-      <section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-background to-background px-margin py-space-xl md:py-20">
+      <section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-background to-background px-4 sm:px-6 md:px-margin py-10 md:py-20">
         <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
         <div class="absolute left-1/4 -bottom-20 w-80 h-80 rounded-full bg-tertiary-fixed/15 blur-3xl pointer-events-none"></div>
         <div class="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
-          <div class="inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface shadow-sm mb-space-md">
-            <span class="flex h-2.5 w-2.5 rounded-full bg-primary animate-pulse"></span>
+          <div class="inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-space-md py-1.5 rounded-2xl sm:rounded-full bg-surface-container-high text-on-surface shadow-sm mb-space-md max-w-full">
+            <span class="flex h-2.5 w-2.5 rounded-full bg-primary animate-pulse shrink-0"></span>
             <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">100% Geotagged &amp; Terverifikasi Satelit</span>
-            <span class="text-outline-variant text-xs">•</span>
+            <span class="text-outline-variant text-xs hidden sm:inline">•</span>
             <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Garansi Perawatan 3 Tahun</span>
           </div>
-          <h1 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface tracking-tight max-w-4xl">
+          <h1 class="font-display-lg text-3xl sm:text-headline-lg md:text-display-lg text-on-surface tracking-tight max-w-4xl leading-tight">
             Adopsi Bibit &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Donasi Pohon Nusantara</span>
           </h1>
-          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-md">
+          <p class="font-body-md sm:font-body-lg text-base sm:text-body-lg text-on-surface-variant max-w-2xl mt-space-md">
             Tanam pohon dari genggaman Anda. Setiap donasi bibit dialokasikan ke kelompok tani hutan mitra, diberi plakat nama digital, dan dipantau pertumbuhannya via koordinat GPS.
           </p>
 
-          <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-space-md mt-space-xl pt-space-md">
-            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
-              <span class="font-headline-sm text-headline-sm text-primary font-extrabold">86.420+</span>
-              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Bibit Tersalurkan</span>
+          <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-space-md mt-space-xl pt-space-md">
+            <div class="p-3 sm:p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
+              <span class="font-headline-sm text-lg sm:text-headline-sm text-primary font-extrabold">86.420+</span>
+              <span class="font-label-sm text-[11px] sm:text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Bibit Tersalurkan</span>
             </div>
-            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
-              <span class="font-headline-sm text-headline-sm text-secondary font-extrabold">94.8%</span>
-              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Tingkat Hidup Bibit</span>
+            <div class="p-3 sm:p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
+              <span class="font-headline-sm text-lg sm:text-headline-sm text-secondary font-extrabold">94.8%</span>
+              <span class="font-label-sm text-[11px] sm:text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Tingkat Hidup Bibit</span>
             </div>
-            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
-              <span class="font-headline-sm text-headline-sm text-tertiary font-extrabold">18 Nursery</span>
-              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Mitra BPDAS &amp; KTH</span>
+            <div class="p-3 sm:p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
+              <span class="font-headline-sm text-lg sm:text-headline-sm text-tertiary font-extrabold">18 Nursery</span>
+              <span class="font-label-sm text-[11px] sm:text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Mitra BPDAS &amp; KTH</span>
             </div>
-            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
-              <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">3 Tahun</span>
-              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Garansi Re-planting</span>
+            <div class="p-3 sm:p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
+              <span class="font-headline-sm text-lg sm:text-headline-sm text-on-surface font-extrabold">3 Tahun</span>
+              <span class="font-label-sm text-[11px] sm:text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Garansi Re-planting</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="w-full px-margin py-space-md max-w-7xl mx-auto">
-        <div class="bg-gradient-to-tr from-surface-container-low via-surface-container-lowest to-surface-container-low rounded-2xl p-space-lg md:p-space-xl shadow-sm border border-surface-container">
+      <section class="w-full px-4 sm:px-6 md:px-margin py-space-md max-w-7xl mx-auto">
+        <div class="bg-gradient-to-tr from-surface-container-low via-surface-container-lowest to-surface-container-low rounded-2xl p-4 sm:p-space-lg md:p-space-xl shadow-sm border border-surface-container">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
             <div class="lg:col-span-7 flex flex-col gap-space-md">
               <div class="flex items-center gap-2">
-                <span class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+                <span class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
                   <span class="material-symbols-outlined text-[24px]">calculate</span>
                 </span>
                 <div>
@@ -139,26 +139,26 @@
                   <span>50 Pohon</span>
                 </div>
               </div>
-              <div class="grid grid-cols-3 gap-space-sm pt-space-xs">
-                <div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm text-center">
-                  <span class="font-headline-sm text-headline-sm text-primary font-bold" id="impact-co2">142.5 kg</span>
-                  <div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">CO₂ Diserap/Tahun</div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-space-sm pt-space-xs">
+                <div class="p-3 sm:p-space-sm rounded-xl bg-surface-container-lowest shadow-sm text-center">
+                  <span class="font-headline-sm text-base sm:text-headline-sm text-primary font-bold" id="impact-co2">142.5 kg</span>
+                  <div class="font-label-sm text-xs sm:text-label-sm text-on-surface-variant mt-0.5">CO₂ Diserap/Tahun</div>
                 </div>
-                <div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm text-center">
-                  <span class="font-headline-sm text-headline-sm text-secondary font-bold" id="impact-motor">1.140 km</span>
-                  <div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Offset Emisi Motor</div>
+                <div class="p-3 sm:p-space-sm rounded-xl bg-surface-container-lowest shadow-sm text-center">
+                  <span class="font-headline-sm text-base sm:text-headline-sm text-secondary font-bold" id="impact-motor">1.140 km</span>
+                  <div class="font-label-sm text-xs sm:text-label-sm text-on-surface-variant mt-0.5">Offset Emisi Motor</div>
                 </div>
-                <div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm text-center">
-                  <span class="font-headline-sm text-headline-sm text-tertiary font-bold" id="impact-ox">10 Orang</span>
-                  <div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Suplai Oksigen/Hari</div>
+                <div class="p-3 sm:p-space-sm rounded-xl bg-surface-container-lowest shadow-sm text-center">
+                  <span class="font-headline-sm text-base sm:text-headline-sm text-tertiary font-bold" id="impact-ox">10 Orang</span>
+                  <div class="font-label-sm text-xs sm:text-label-sm text-on-surface-variant mt-0.5">Suplai Oksigen/Hari</div>
                 </div>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-md border border-surface-container">
+            <div class="lg:col-span-5 bg-surface-container-lowest p-4 sm:p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-md border border-surface-container">
               <div>
                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Ringkasan Donasi</span>
-                <div class="flex items-baseline justify-between mt-space-xs">
-                  <span class="font-headline-md text-headline-md text-primary font-extrabold" id="impact-cost">Rp 125.000</span>
+                <div class="flex flex-wrap items-baseline justify-between mt-space-xs gap-1">
+                  <span class="font-headline-md text-2xl sm:text-headline-md text-primary font-extrabold" id="impact-cost">Rp 125.000</span>
                   <span class="font-label-sm text-label-sm text-on-surface-variant">atau 500 Poin Hijau</span>
                 </div>
                 <ul class="space-y-1.5 mt-space-md text-body-sm text-on-surface-variant">
@@ -176,7 +176,7 @@
         </div>
       </section>
 
-      <section class="w-full px-margin py-space-lg max-w-7xl mx-auto" id="tree-catalog">
+      <section class="w-full px-4 sm:px-6 md:px-margin py-space-lg max-w-7xl mx-auto" id="tree-catalog">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
           <div>
             <div class="flex items-center gap-2 text-primary font-label-md text-label-md tracking-wider uppercase mb-1">
