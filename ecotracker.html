@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>EcoSmart - EcoTracker Interaktif</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+  
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 w-full px-margin flex items-center justify-between gap-gutter">
+      <a href="index.html" class="flex items-center gap-space-md shrink-0 group">
+        <img alt="EcoSmart Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VxnTWcVeBO48LyD2YOdYj6Zkq7S2xj4yOcODQ6aLW-WCrXOuVxUuB7M2O-aU8p0ttdZ4ikQ32bQnTo2FdrMi_1QAMliJTTudpzfWqjEDDFvosE7AxlaIWjtlOs4F-QKn7catXdGLLl9ySII3gKkFrq7Lzxv3hEl7aaLzh19-ZwxS7uh7BrBev5BvygbJyL3ghekbNDSaaQqR_VKZIHKWIEiaRob9Uyp-_S0OnwvJjMv_WRN6CXwQ5uV-J4"/>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">EcoSmart</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide uppercase">Digital Green Solutions</span>
+        </div>
+      </a>
+      <nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-semibold">
+        <a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="beranda-&-edukasi" href="index.html">Beranda &amp; Edukasi</a>
+        <a aria-current="page" class="px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container rounded-lg font-semibold" data-path="ecotracker" href="ecotracker.html">EcoTracker</a>
+        <a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="kampanye-&-relawan" href="kampanye.html">Kampanye &amp; Relawan</a>
+        <a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="katalog-bibit-&-donasi" href="katalog-bibit.html">Katalog Bibit &amp; Donasi</a>
+      </nav>
+      <div class="flex items-center gap-space-sm shrink-0">
+        <div class="hidden md:flex items-center gap-space-xs">
+          <div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
+            <span class="text-sm">🔥</span><span id="nav-streak">14 Hari</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
+            <span class="text-sm">🌿</span><span id="nav-points">1.420 Poin</span>
+          </div>
+          <div class="flex items-center px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
+            Lvl 4: Eco Pioneer
+          </div>
+        </div>
+        <button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button" onclick="alert('Notifikasi: Pohon Mangrove #08 Anda butuh penyiraman hari ini!')">
+          <span class="material-symbols-outlined text-[20px]">notifications</span>
+          <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span>
+        </button>
+        <div class="flex items-center gap-space-xs pl-space-xs">
+          <a href="login.html" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-all" title="Ganti Akun / Masuk">
+            <span class="material-symbols-outlined text-[16px]">switch_account</span>
+            <span>Akun</span>
+          </a>
+          <img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-4PYo7NvEaIVU5LIrGNDFcqtxP_gXmH_m4r__xqxylbYq6xCEBgN8gdPN9M08t72pz4U8-CeTzNBeSs_iOAkUZkKbevRg8SaHBg_7i3PY91HEuV4dwxJ6GB9eCzCZ2y_FuwUBVsQZrFqcrBDm4IPpT47Vc4qPMVqQ3ofBScsTyr5_lDEDw-R9H6p845PYO48Hcf3oBMHfcJz_K2yjDrRdT4iS0WQBdk9m9xD2TvsuGo7dB7HGQlunmA"/>
+        </div>
+        
+        <button class="xl:hidden w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container" id="mobileMenuBtn" type="button">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="hidden xl:hidden bg-surface-container-lowest border-t border-surface-container px-margin py-3 flex flex-col gap-2" id="mobileNavMenu">
+      <a class="px-space-md py-2 text-on-surface-variant hover:bg-surface-container rounded-lg font-semibold text-label-md" href="index.html">Beranda &amp; Edukasi</a>
+      <a class="px-space-md py-2 bg-primary-container text-on-primary-container rounded-lg font-semibold text-label-md" href="ecotracker.html">EcoTracker</a>
+      <a class="px-space-md py-2 text-on-surface-variant hover:bg-surface-container rounded-lg font-semibold text-label-md" href="kampanye.html">Kampanye &amp; Relawan</a>
+      <a class="px-space-md py-2 text-on-surface-variant hover:bg-surface-container rounded-lg font-semibold text-label-md" href="katalog-bibit.html">Katalog Bibit &amp; Donasi</a>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-background">
+    <div class="flex flex-col w-full">
+      <div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin pt-space-md pb-space-xl space-y-space-lg">
+        
+        <section class="w-full rounded-2xl bg-surface-container-low p-space-md md:p-space-lg shadow-sm relative overflow-hidden">
+          <div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+          <div class="absolute left-1/3 -bottom-20 w-64 h-64 rounded-full bg-tertiary-fixed/15 blur-2xl pointer-events-none"></div>
+          <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md">
+            
+            <div class="flex items-center gap-space-md">
+              <div class="relative">
+                <img class="w-16 h-16 rounded-2xl object-cover shadow-sm ring-4 ring-primary/10" data-alt="Portrait of an enthusiastic young eco advocate smiling outdoor with lush botanical foliage garden sunlight background, soft clean eco-tech modern aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBenkAC-H6MiCGWjC9Hqrs4AXnGegiDZNrI8Io8iz0TEvvdHTbYuEYhzjy8rsiZCGwsJS5GLzpfF9FyDh03vi66s7LB5yOph2oaRkm2x_fD6HhXK3Ska1K3LelEin_k9LYiiSfeRKXNcUkBazkUZd0WD0UWCqb6wPwkVF4pyElHxEmyLI2hiB6Zk7rQEDYeiHs1rKhUIx2I-XGSMCTtLx8CemW0dg4DAj7rWw6WRJYa0UGGhEKQ1RO4bg"/>
+                <span class="absolute -bottom-1.5 -right-1.5 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm">Lv.4</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-space-xs">
+                  <h1 class="font-headline-sm text-headline-sm text-on-surface">Rian Nusantara</h1>
+                  <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Penjaga Hutan Kota</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+                  <span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+                  Status ID: #ECO-94821 • Wilayah Jakarta Selatan
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-space-sm self-start lg:self-auto">
+              <button class="flex items-center gap-2 px-space-md py-space-sm rounded-lg bg-primary text-on-primary hover:bg-on-primary-fixed-variant active:scale-95 transition-all shadow-md font-label-lg text-label-lg" id="openLogModalBtn" type="button">
+                <span class="material-symbols-outlined text-[20px]">add_circle</span>
+                Catat Aksi Hijau Hari Ini
+              </button>
+              <button class="w-10 h-10 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface flex items-center justify-center transition-colors" type="button" onclick="navigator.clipboard.writeText(window.location.href); alert('Tautan profil EcoTracker berhasil disalin ke clipboard!');">
+                <span class="material-symbols-outlined text-[20px]">share</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-sm">
+            
+            <div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+              <div class="flex items-start justify-between">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Konsistensi Aksi</span>
+                  <div class="flex items-center gap-1.5 mt-1">
+                    <span class="font-headline-md text-headline-md text-on-surface" id="stat-streak">14 Hari</span>
+                    <span class="text-xl">🔥</span>
+                  </div>
+                </div>
+                <span class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[22px]">local_fire_department</span>
+                </span>
+              </div>
+              <div class="mt-space-md pt-space-xs">
+                <div class="flex items-center justify-between text-center gap-1">
+                  <div class="flex flex-col items-center">
+                    <span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Sen</span>
+                    <span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-[11px] font-bold">✓</span>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Sel</span>
+                    <span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-[11px] font-bold">✓</span>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Rab</span>
+                    <span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-[11px] font-bold">✓</span>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Kam</span>
+                    <span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-[11px] font-bold">✓</span>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Jum</span>
+                    <span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-[11px] font-bold">✓</span>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Sab</span>
+                    <span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-[11px] font-bold">✓</span>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="font-label-sm text-label-sm text-primary font-bold mb-1">Min</span>
+                    <span class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center text-[11px] font-extrabold shadow-sm ring-2 ring-primary/20">★</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+              <div class="flex items-start justify-between">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Saldo Poin Hijau</span>
+                  <div class="flex items-center gap-1.5 mt-1">
+                    <span class="font-headline-md text-headline-md text-on-surface" id="stat-points">1.420</span>
+                    <span class="text-xl">🌿</span>
+                  </div>
+                </div>
+                <span class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[22px]">energy_savings_leaf</span>
+                </span>
+              </div>
+              <div class="mt-space-md flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">+180 minggu ini</span>
+                <a class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center gap-0.5" href="katalog-bibit.html">Tukar Hadiah →</a>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+              <div class="flex items-start justify-between">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Reduksi Karbon (Bulan Ini)</span>
+                  <div class="flex items-baseline gap-1 mt-1">
+                    <span class="font-headline-md text-headline-md text-primary font-extrabold" id="stat-carbon">42.5</span>
+                    <span class="font-label-lg text-label-lg text-on-surface font-semibold">kg CO₂e</span>
+                  </div>
+                </div>
+                <span class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[22px]">nest_eco_leaf</span>
+                </span>
+              </div>
+              <div class="mt-space-md">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1 font-body-sm">
+                  <span>Target: 50 kg</span>
+                  <span class="font-bold text-primary" id="carbon-percent">85%</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary to-secondary-container rounded-full" id="carbon-bar" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+              <div class="flex items-start justify-between">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Pohon Asuh Virtual</span>
+                  <div class="font-title-md text-title-md text-on-surface mt-1 font-bold">Mangrove #08</div>
+                </div>
+                <span class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[22px]">potted_plant</span>
+                </span>
+              </div>
+              <div class="mt-space-md">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1 font-body-sm">
+                  <span class="text-tertiary font-medium" id="tree-growth-label">Tumbuh 68%</span>
+                  <span class="font-bold text-on-surface">Tahap 3/4</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+                  <div class="h-full bg-tertiary-fixed rounded-full transition-all duration-500" id="tree-growth-bar" style="width: 68%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+          
+          <section class="lg:col-span-8 flex flex-col space-y-space-xl">
+            
+            <div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-lg">
+                <div>
+                  <div class="flex items-center gap-space-xs">
+                    <span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">Unit 1 - Telah Selesai</span>
+                    <span class="flex items-center text-tertiary text-xs font-bold">★★★</span>
+                  </div>
+                  <h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">Fondasi Rumah Ramah Lingkungan</h2>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Menguasai pemilahan dasar, komposting mandiri, dan penataan sudut hijau rumah.</p>
+                </div>
+                <span class="shrink-0 px-3 py-1.5 rounded-xl bg-surface-container text-primary font-label-md text-label-md flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+                  Tuntas 100%
+                </span>
+              </div>
+              
+              <div class="relative py-space-md flex flex-col items-center">
+                
+                <div class="w-full flex justify-center md:justify-start md:pl-28 my-3">
+                  <div class="group relative flex flex-col items-center">
+                    <button class="w-16 h-16 rounded-full bg-primary text-on-primary shadow-md flex items-center justify-center ring-4 ring-primary/20 hover:scale-105 transition-transform" onclick="alert('Unit 1 - Modul 1: Pisah Sampah Organik (Nilai Sempurna: 100/100)')" title="Selesai: Pisah Sampah Organik" type="button">
+                      <span class="material-symbols-outlined text-[28px]">delete_sweep</span>
+                    </button>
+                    <div class="mt-2 text-center">
+                      <div class="font-label-md text-label-md text-on-surface">Pisah Sampah</div>
+                      <div class="text-tertiary text-[11px] font-bold">★ 3/3 Selesai</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <svg class="w-36 h-12 text-primary/30" fill="none" viewbox="0 0 144 48">
+                  <path d="M40 0 C 40 30, 104 18, 104 48" stroke="currentColor" stroke-dasharray="6 6" stroke-linecap="round" stroke-width="4"></path>
+                </svg>
+                
+                <div class="w-full flex justify-center md:justify-center my-3">
+                  <div class="group relative flex flex-col items-center">
+                    <button class="w-16 h-16 rounded-full bg-primary text-on-primary shadow-md flex items-center justify-center ring-4 ring-primary/20 hover:scale-105 transition-transform" onclick="alert('Unit 1 - Modul 2: Kompos Takakura Pertama (Nilai Sempurna: 100/100)')" title="Selesai: Kompos Pertama" type="button">
+                      <span class="material-symbols-outlined text-[28px]">compost</span>
+                    </button>
+                    <div class="mt-2 text-center">
+                      <div class="font-label-md text-label-md text-on-surface">Kompos Perdana</div>
+                      <div class="text-tertiary text-[11px] font-bold">★ 3/3 Selesai</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <svg class="w-36 h-12 text-primary/30" fill="none" viewbox="0 0 144 48">
+                  <path d="M104 0 C 104 30, 40 18, 40 48" stroke="currentColor" stroke-dasharray="6 6" stroke-linecap="round" stroke-width="4"></path>
+                </svg>
+                
+                <div class="w-full flex justify-center md:justify-start md:pl-24 my-3">
+                  <div class="group relative flex flex-col items-center">
+                    <button class="w-16 h-16 rounded-full bg-primary text-on-primary shadow-md flex items-center justify-center ring-4 ring-primary/20 hover:scale-105 transition-transform" onclick="alert('Unit 1 - Modul 3: Pojok Hijau Hunian (Nilai Sempurna: 100/100)')" title="Selesai: Pojok Hijau" type="button">
+                      <span class="material-symbols-outlined text-[28px]">yard</span>
+                    </button>
+                    <div class="mt-2 text-center">
+                      <div class="font-label-md text-label-md text-on-surface">Pojok Hijau Hunian</div>
+                      <div class="text-tertiary text-[11px] font-bold">★ 3/3 Selesai</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-gradient-to-b from-surface-container-low to-surface-container-lowest p-space-lg shadow-md relative overflow-hidden">
+              <div class="absolute -right-10 -bottom-10 w-52 h-52 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-lg relative z-10">
+                <div>
+                  <div class="flex items-center gap-space-xs">
+                    <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase font-bold tracking-wider">Unit 2 - Sedang Aktif</span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping inline-block"></span>
+                  </div>
+                  <h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">Kebun Mandiri &amp; Hemat Sumber Daya</h2>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Langkah nyata memproduksi pangan segar perkotaan dan efisiensi air.</p>
+                </div>
+                <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-highest text-on-surface font-label-md text-label-md">
+                  <span class="material-symbols-outlined text-[18px] text-primary">flag</span>
+                  Progress: 1/4 Selesai
+                </div>
+              </div>
+
+              <div class="relative py-space-lg flex flex-col items-center">
+                
+                <div class="w-full flex justify-center md:justify-center my-4 relative">
+                  
+                  <div class="absolute -top-12 z-20 flex flex-col items-center animate-bounce">
+                    <div class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-md flex items-center gap-1">
+                      <span>Mulai Aksi Sekarang!</span>
+                      <span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+                    </div>
+                    <div class="w-2 h-2 bg-primary rotate-45 -mt-1"></div>
+                  </div>
+                  <div class="group relative flex flex-col items-center">
+                    <button class="w-20 h-20 rounded-full bg-primary text-on-primary shadow-xl flex items-center justify-center ring-8 ring-primary/20 hover:scale-110 active:scale-95 transition-all" id="activeNodeBtn" type="button">
+                      <span class="material-symbols-outlined text-[36px]">psychiatry</span>
+                    </button>
+                    <div class="mt-3 text-center">
+                      <span class="font-title-md text-title-md text-on-surface font-bold">Tanam Bibit Sayur</span>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sesi Praktik Mandiri</p>
+                      <span class="inline-block mt-1.5 px-3 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-extrabold">+60 XP &amp; Daun Emas</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <svg class="w-48 h-16 text-primary/40" fill="none" viewbox="0 0 192 64">
+                  <path d="M96 0 C 96 40, 160 24, 160 64" stroke="currentColor" stroke-dasharray="8 8" stroke-linecap="round" stroke-width="6"></path>
+                </svg>
+                
+                <div class="w-full flex justify-center md:justify-end md:pr-24 my-4">
+                  <div class="group relative flex flex-col items-center opacity-85 hover:opacity-100 transition-opacity">
+                    <button class="w-16 h-16 rounded-full bg-surface-container-high text-on-surface-variant shadow-sm flex items-center justify-center ring-4 ring-outline-variant/30 hover:border hover:border-primary transition-all" onclick="alert('Modul ini terkunci. Harap selesaikan modul Tanam Bibit Sayur terlebih dahulu!')" type="button">
+                      <span class="material-symbols-outlined text-[28px]">lock</span>
+                    </button>
+                    <div class="mt-2 text-center">
+                      <div class="font-label-md text-label-md text-on-surface">Irigasi Daur Ulang</div>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Terkunci (Selesaikan Sesi 1)</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <svg class="w-48 h-16 text-outline-variant/50" fill="none" viewbox="0 0 192 64">
+                  <path d="M160 0 C 160 40, 50 24, 50 64" stroke="currentColor" stroke-dasharray="6 6" stroke-linecap="round" stroke-width="5"></path>
+                </svg>
+                
+                <div class="w-full flex justify-center md:justify-start md:pl-28 my-4">
+                  <div class="group relative flex flex-col items-center">
+                    <div class="relative">
+                      <button class="w-16 h-16 rounded-2xl bg-surface-container text-on-surface shadow-sm flex items-center justify-center hover:scale-105 transition-transform" onclick="alert('🎁 Peti Misteri Terbuka! Anda mendapatkan voucher klaim benih bayam hidroponik gratis di mitra nursery terdekat.')" type="button">
+                        <span class="material-symbols-outlined text-[30px] text-tertiary">inventory_2</span>
+                      </button>
+                      <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-black flex items-center justify-center">?</span>
+                    </div>
+                    <div class="mt-2 text-center">
+                      <div class="font-label-md text-label-md text-on-surface">Peti Kejutan: Microgreens</div>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Klaim Benih Gratis</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <svg class="w-48 h-16 text-outline-variant/50" fill="none" viewbox="0 0 192 64">
+                  <path d="M50 0 C 50 40, 96 24, 96 64" stroke="currentColor" stroke-dasharray="6 6" stroke-linecap="round" stroke-width="5"></path>
+                </svg>
+                
+                <div class="w-full flex justify-center my-4">
+                  <div class="relative flex flex-col items-center p-space-md rounded-2xl bg-surface-container-high/80 backdrop-blur-sm shadow-md max-w-sm text-center">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-primary to-secondary-container text-on-primary flex items-center justify-center shadow-lg -mt-8 ring-4 ring-surface-bright">
+                      <span class="material-symbols-outlined text-[40px]">military_tech</span>
+                    </div>
+                    <div class="mt-3">
+                      <div class="flex items-center justify-center gap-1 text-tertiary font-label-sm text-label-sm font-bold">
+                        <span>👑 CHECKPOINT EVALUASI</span>
+                      </div>
+                      <h3 class="font-title-md text-title-md text-on-surface font-bold mt-1">Uji Pengetahuan: Nol Sampah</h3>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                        Selesaikan kuis studi kasus 10 pertanyaan untuk membuka lencana resmi dan sertifikat relawan.
+                      </p>
+                      <div class="mt-space-sm flex items-center justify-center gap-space-xs text-xs text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[16px] text-outline">lock</span>
+                        Syarat: Lengkapi 3 aksi Unit 2
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-surface-container-low p-space-lg shadow-sm opacity-80 hover:opacity-95 transition-opacity">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+                <div class="flex items-center gap-space-md">
+                  <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+                    <span class="material-symbols-outlined text-[26px]">groups</span>
+                  </div>
+                  <div>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Unit 3 • Mendatang</span>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Duta Hijau Lingkungan RT/RW</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sosialisasi warga, bank sampah komunal, dan audit emisi perumahan.</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">
+                  <span class="material-symbols-outlined text-[16px]">lock_clock</span>
+                  Membuka di Level 5
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <aside class="lg:col-span-4 flex flex-col space-y-space-lg">
+            
+            <div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-sm">
+              <div class="flex items-center justify-between pb-space-sm">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[22px] text-primary">task_alt</span>
+                  <h3 class="font-title-md text-title-md text-on-surface font-bold">Misi Harian</h3>
+                </div>
+                <span class="font-label-sm text-label-sm text-on-surface-variant" id="quest-countdown">Reset dlm 07:42:15</span>
+              </div>
+              <div class="space-y-space-sm pt-space-xs">
+                
+                <div class="rounded-xl bg-surface-container-low p-space-sm flex flex-col gap-2">
+                  <div class="flex items-start justify-between">
+                    <div class="flex items-start gap-2.5">
+                      <span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-[13px] mt-0.5">✓</span>
+                      <div>
+                        <h4 class="font-label-md text-label-md text-on-surface">Siram tanaman air cucian beras</h4>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Nutrisi alami hemat air baku</p>
+                      </div>
+                    </div>
+                    <span class="font-label-sm text-label-sm text-primary font-bold">+20 XP</span>
+                  </div>
+                  <div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-primary h-full rounded-full" style="width: 100%"></div>
+                  </div>
+                  <div class="flex justify-end">
+                    <span class="px-2 py-0.5 rounded-md bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm text-[11px] font-bold">Telah Diklaim</span>
+                  </div>
+                </div>
+
+                <div class="rounded-xl bg-surface-container-low p-space-sm flex flex-col gap-2" id="quest-photo-container">
+                  <div class="flex items-start justify-between">
+                    <div class="flex items-start gap-2.5">
+                      <span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-[12px] font-bold mt-0.5" id="quest2-icon">2</span>
+                      <div>
+                        <h4 class="font-label-md text-label-md text-on-surface">Unggah foto aksi daur ulang</h4>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Verifikasi AI deteksi wadah daur ulang</p>
+                      </div>
+                    </div>
+                    <span class="font-label-sm text-label-sm text-tertiary font-bold">+35 XP</span>
+                  </div>
+                  <div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-primary h-full rounded-full transition-all duration-500" id="quest2-bar" style="width: 0%"></div>
+                  </div>
+                  <div class="flex items-center justify-between pt-1" id="quest2-action-row">
+                    <span class="text-[11px] font-body-sm text-on-surface-variant" id="quest2-progress-label">Progres: 0/1 Foto</span>
+                    <button class="px-3 py-1 rounded-lg bg-primary text-on-primary hover:bg-on-primary-fixed-variant text-[12px] font-label-sm text-label-sm flex items-center gap-1 shadow-sm transition-all" onclick="document.getElementById('fileUploadInput').click()" type="button">
+                      <span class="material-symbols-outlined text-[15px]">photo_camera</span>
+                      Upload Bukti
+                    </button>
+                    <input accept="image/*" class="hidden" id="fileUploadInput" onchange="handlePhotoUpload(this)" type="file"/>
+                  </div>
+                </div>
+
+                <div class="rounded-xl bg-surface-container-low p-space-sm flex flex-col gap-2">
+                  <div class="flex items-start justify-between">
+                    <div class="flex items-start gap-2.5">
+                      <span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-[13px] mt-0.5">✓</span>
+                      <div>
+                        <h4 class="font-label-md text-label-md text-on-surface">Baca panduan hidroponik 5 mnt</h4>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Modul microgreens pemula</p>
+                      </div>
+                    </div>
+                    <span class="font-label-sm text-label-sm text-primary font-bold">+15 XP</span>
+                  </div>
+                  <div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-primary h-full rounded-full" style="width: 100%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden">
+              <div class="flex items-center justify-between pb-space-sm">
+                <div>
+                  <h3 class="font-title-md text-title-md text-on-surface font-bold">Pohon Virtual Asuh</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Diserap ke program reboisasi Teluk Jakarta</p>
+                </div>
+                <span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Tahap 3</span>
+              </div>
+              
+              <div class="relative w-full h-48 rounded-xl bg-surface-container-low overflow-hidden flex flex-col items-center justify-end p-space-sm mt-space-xs">
+                <img class="absolute inset-0 w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500" data-alt="Vibrant healthy digital 3D potted mangrove sapling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1wQuRfbC62m_HEhwZQnRdCsad9TJrea8Ftf_HTecCAIBREMT4ACDgtH6-__sxk1-WgBdNo-HVdGE1Tvq4tDzb-vb0t7BH1Bc8kj28kGmekpsC7cgkVllZbw5MfZuAEYgRXS2_rJ4efJnpzyuwCrFxLOHPrIISdS4pOvyrpg8vxK9_qVXR_aeTIuIU6LumCwNG4-HEL8oyU4fOYcxYwDP-i-7II4Kbe4tSYBz-q9H5zqJt3eH-GLdy9g"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent pointer-events-none"></div>
+                <div class="relative z-10 w-full flex items-end justify-between text-on-secondary px-space-xs">
+                  <div>
+                    <span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary-container">Status Pertumbuhan</span>
+                    <div class="font-title-md text-title-md font-bold" id="tree-growth-status">Tumbuh Sehat (68%)</div>
+                  </div>
+                  <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold shadow-md hover:scale-105 active:scale-95 transition-all" id="waterTreeBtn" type="button">
+                    <span class="material-symbols-outlined text-[18px]">water_drop</span>
+                    Siram (+5%)
+                  </button>
+                </div>
+              </div>
+              <div class="mt-space-sm pt-space-xs flex items-center justify-between text-xs text-on-surface-variant font-body-sm">
+                <span id="tree-remaining-pct">Sisa 32% menuju penanaman nyata</span>
+                <span class="text-primary font-semibold" id="tree-leaves-count">Tersisa 160 Daun</span>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-sm">
+              <div class="flex items-center justify-between pb-space-sm">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[22px] text-tertiary">leaderboard</span>
+                  <h3 class="font-title-md text-title-md text-on-surface font-bold">Pahlawan Pekan Ini</h3>
+                </div>
+                <span class="font-label-sm text-label-sm text-primary font-bold">Wilayah Jabodetabek</span>
+              </div>
+              <div class="space-y-space-xs pt-space-xs">
+                
+                <div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                  <div class="flex items-center gap-space-sm">
+                    <span class="w-6 text-center font-bold text-tertiary text-sm">🥇</span>
+                    <img class="w-9 h-9 rounded-full object-cover" data-alt="Annisa Laras" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbhQ7dstoNJoP1rzkczbCqWt2y7kG-J26vX6prLit8g__n_YgMG1UhZcymyVQqMmsvZq-cxBrgdJNMIIBGmJUYOTilS-lFADRlDCAbTzMxnClE1-FzX0ehZe8zxf5F9H267c5WewacvuyQEpxHago-RtYWm5-kTQRVezrVMXBZkE1TkfxBndPJ2ozJGXCjolVdwf4MsB5MrdSy4kwkV5bRarG-MARJg4U2mbxw9K8HxCa3Dvqoi8NaMg"/>
+                    <div>
+                      <h4 class="font-label-md text-label-md text-on-surface">Annisa Laras</h4>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Depok • 24 Hari Streak</span>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-label-md text-label-md text-primary font-bold">2.840 XP</span>
+                  </div>
+                </div>
+                
+                <div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                  <div class="flex items-center gap-space-sm">
+                    <span class="w-6 text-center font-bold text-on-surface-variant text-sm">🥈</span>
+                    <img class="w-9 h-9 rounded-full object-cover" data-alt="Bima Arya" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHwdAer21CrvJwaSIIaY9Ujgz0JGQwauOleDeOK82iR_rdgyia5EE9cypbfl8-ZWVkd3AzmlwXCnZYRIt8H7r2qc3VGDG-jJkpJwVTAR05bRN4YEx33GpGDujsJ3ZVufPoaBB8pbkPtpGI_4isYT8GIMFMfA147PA8k9eXcNaHHRPbSEbX6_gk69u7N0QahRBqcBkmbVZ7vDn2NW4YYOBnQmhtg1Qoh9Wg2mG4i86pmf15SSOhpny1lA"/>
+                    <div>
+                      <h4 class="font-label-md text-label-md text-on-surface">Bima Arya</h4>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Bogor • 19 Hari Streak</span>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-label-md text-label-md text-primary font-bold">2.410 XP</span>
+                  </div>
+                </div>
+                
+                <div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                  <div class="flex items-center gap-space-sm">
+                    <span class="w-6 text-center font-bold text-on-surface-variant text-sm">🥉</span>
+                    <img class="w-9 h-9 rounded-full object-cover" data-alt="Clara Melati" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOkhqV9DqH7tkV6nZD1VpIFOdN63uwHGzuH57T5y9mxLcssuIYXyf4aCDKOpb59531s73ZlyEW4WOKPwThmSae3ov5K0dhIDPJKkjJCgwinYAcq1D3jeAfnaVzaQV4EXZuwE-gyka9EZJK3LDiQdd9pP6tvYNzj4TCSousd6Ekav13jFuPIMHc83RP9gVmWTWyNDGXAPkkOpkWZk3DwJbBDwbVcOvVSAS6rLaY7Dm4VPNqv8-x0DGOVQ"/>
+                    <div>
+                      <h4 class="font-label-md text-label-md text-on-surface">Clara Melati</h4>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Tangerang • 17 Hari</span>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-label-md text-label-md text-primary font-bold">2.180 XP</span>
+                  </div>
+                </div>
+                
+                <div class="flex items-center justify-between p-2 rounded-xl bg-primary/10 border border-primary/20 shadow-sm">
+                  <div class="flex items-center gap-space-sm">
+                    <span class="w-6 text-center font-bold text-primary text-sm">#7</span>
+                    <div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">Kamu</div>
+                    <div>
+                      <h4 class="font-label-md text-label-md text-primary font-bold">Rian Nusantara</h4>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">14 Hari Streak 🔥</span>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-label-md text-label-md text-primary font-bold" id="leaderboard-user-points">1.420 XP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-sm">
+              <div class="flex items-center justify-between pb-space-sm">
+                <h3 class="font-title-md text-title-md text-on-surface font-bold">Koleksi Lencana</h3>
+                <a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" href="javascript:void(0)" onclick="alert('Daftar Semua Lencana: Anda telah membuka 8 dari 24 lencana lingkungan!')">Lihat Semua (8/24)</a>
+              </div>
+              <div class="grid grid-cols-4 gap-space-sm pt-space-xs text-center">
+                
+                <div class="flex flex-col items-center group cursor-pointer" onclick="alert('Lencana: Eco Starter - Memulai langkah pertama aksi iklim mandiri.')">
+                  <div class="w-13 h-13 p-2.5 rounded-2xl bg-secondary-container/50 text-on-secondary-container shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-[28px]">eco</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-on-surface mt-1.5 leading-tight">Eco Starter</span>
+                </div>
+                
+                <div class="flex flex-col items-center group cursor-pointer" onclick="alert('Lencana: Master Kompos - Mengolah 20kg sampah organik rumah tangga.')">
+                  <div class="w-13 h-13 p-2.5 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-[28px]">recycling</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-on-surface mt-1.5 leading-tight">Master Kompos</span>
+                </div>
+                
+                <div class="flex flex-col items-center group cursor-pointer" onclick="alert('Lencana: Green Thumb - Menanam dan merawat 10 tanaman hidroponik & pot.')">
+                  <div class="w-13 h-13 p-2.5 rounded-2xl bg-primary-fixed text-on-primary-fixed shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-[28px]">nature_people</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-on-surface mt-1.5 leading-tight">Green Thumb</span>
+                </div>
+                
+                <div class="flex flex-col items-center opacity-40 cursor-not-allowed" onclick="alert('Lencana: Guardian (Terkunci) - Capai level 5 dan tanam 5 bibit pohon nyata.')">
+                  <div class="w-13 h-13 p-2.5 rounded-2xl bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[28px]">forest</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5 leading-tight">Guardian</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-md hidden items-center justify-center p-space-md" id="logActionModal">
+          <div class="bg-surface-container-lowest w-full max-w-lg rounded-2xl p-space-lg shadow-xl relative animate-in fade-in zoom-in-95 duration-200">
+            <div class="flex items-center justify-between pb-space-md">
+              <div class="flex items-center gap-2">
+                <span class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">add_task</span>
+                </span>
+                <div>
+                  <h3 class="font-title-md text-title-md text-on-surface font-bold">Catat Aksi Hijau Harian</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Dapatkan poin seketika dan jaga api streak!</p>
+                </div>
+              </div>
+              <button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface flex items-center justify-center" id="closeLogModalBtn" type="button">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+              </button>
+            </div>
+            <form class="space-y-space-md" id="ecoActionForm" onsubmit="event.preventDefault(); handleActionLogged();">
+              
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-1.5">Kategori Aktivitas</label>
+                <div class="grid grid-cols-3 gap-2">
+                  <label class="cursor-pointer">
+                    <input checked="" class="peer hidden" name="eco_category" type="radio" value="waste"/>
+                    <div class="p-2.5 rounded-xl bg-surface-container peer-checked:bg-primary peer-checked:text-on-primary text-center transition-all flex flex-col items-center">
+                      <span class="material-symbols-outlined text-[20px] mb-0.5">delete_outline</span>
+                      <span class="text-[12px] font-label-md font-bold">Kelola Sampah</span>
+                    </div>
+                  </label>
+                  <label class="cursor-pointer">
+                    <input class="peer hidden" name="eco_category" type="radio" value="plant"/>
+                    <div class="p-2.5 rounded-xl bg-surface-container peer-checked:bg-primary peer-checked:text-on-primary text-center transition-all flex flex-col items-center">
+                      <span class="material-symbols-outlined text-[20px] mb-0.5">nest_eco_leaf</span>
+                      <span class="text-[12px] font-label-md font-bold">Tanam &amp; Siram</span>
+                    </div>
+                  </label>
+                  <label class="cursor-pointer">
+                    <input class="peer hidden" name="eco_category" type="radio" value="energy"/>
+                    <div class="p-2.5 rounded-xl bg-surface-container peer-checked:bg-primary peer-checked:text-on-primary text-center transition-all flex flex-col items-center">
+                      <span class="material-symbols-outlined text-[20px] mb-0.5">bolt</span>
+                      <span class="text-[12px] font-label-md font-bold">Hemat Energi</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-1">Perkiraan Dampak</label>
+                <div class="flex items-center gap-space-sm">
+                  <input class="flex-1 px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:ring-2 focus:ring-primary font-body-md text-body-md" id="metricInput" placeholder="Contoh: 1.5" required="" step="0.1" type="number" value="1.5"/>
+                  <select class="px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:ring-2 focus:ring-primary font-label-md text-label-md" id="metricUnit">
+                    <option value="kg">kg sampah terpilah</option>
+                    <option value="liter">liter air dihemat</option>
+                    <option value="pohon">bibit disiram</option>
+                    <option value="kwh">kWh listrik dihemat</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-1">Catatan Tambahan (Opsional)</label>
+                <input class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:ring-2 focus:ring-primary font-body-md text-body-md" id="actionNotes" placeholder="Menyiram 12 bibit cabai pakai air sisa bilasan sayur" type="text"/>
+              </div>
+              
+              <div class="pt-space-sm flex items-center justify-end gap-space-sm">
+                <button class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors" id="cancelLogModalBtn" type="button">
+                  Batal
+                </button>
+                <button class="px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-all shadow-md flex items-center gap-2" type="submit">
+                  <span class="material-symbols-outlined text-[18px]">verified</span>
+                  Simpan &amp; Klaim Poin
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-md hidden items-center justify-center p-space-md" id="lessonModal">
+          <div class="bg-surface-container-lowest w-full max-w-md rounded-2xl p-space-lg shadow-xl relative text-center">
+            <div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mx-auto mb-space-sm">
+              <span class="material-symbols-outlined text-[32px]">potted_plant</span>
+            </div>
+            <span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-bold uppercase">Unit 2 • Modul 1</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mt-2">Tanam Bibit Sayur Pertama</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Ikuti panduan interaktif 4 menit: Menyiapkan media tanam dari limbah sabut kelapa dan menanam benih sayur kangkung/bayam hidroponik sederhana.
+            </p>
+            <div class="my-space-md p-space-sm rounded-xl bg-surface-container-low flex items-center justify-around text-center">
+              <div>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Estimasi Waktu</span>
+                <div class="font-label-md text-label-md text-on-surface font-bold">4 Menit</div>
+              </div>
+              <div class="w-px h-8 bg-surface-container-highest"></div>
+              <div>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Hadiah Aksi</span>
+                <div class="font-label-md text-label-md text-primary font-bold">+60 Daun Emas</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-sm">
+              <button class="flex-1 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md" id="closeLessonModalBtn" type="button">
+                Nanti Saja
+              </button>
+              <button class="flex-1 py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant shadow-md" onclick="startInteractiveLesson()" type="button">
+                Mulai Belajar!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.02)] mt-space-xl">
+    <div class="w-full px-margin py-space-xl">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-space-lg pb-space-lg">
+        <div class="flex flex-col items-center md:items-start gap-space-xs">
+          <div class="flex items-center gap-space-sm">
+            <img alt="EcoSmart Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VxnTWcVeBO48LyD2YOdYj6Zkq7S2xj4yOcODQ6aLW-WCrXOuVxUuB7M2O-aU8p0ttdZ4ikQ32bQnTo2FdrMi_1QAMliJTTudpzfWqjEDDFvosE7AxlaIWjtlOs4F-QKn7catXdGLLl9ySII3gKkFrq7Lzxv3hEl7aaLzh19-ZwxS7uh7BrBev5BvygbJyL3ghekbNDSaaQqR_VKZIHKWIEiaRob9Uyp-_S0OnwvJjMv_WRN6CXwQ5uV-J4"/>
+            <span class="font-title-md text-title-md text-primary font-bold">EcoSmart</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left max-w-sm">Pemberdayaan aksi iklim nyata melalui inovasi digital, edukasi mandiri, dan pelacakan jejak karbon kolaboratif.</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-space-lg">
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all px-space-sm py-1 rounded-lg" data-path="panduan-komunitas" href="#">EcoCommunity Guidelines</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all px-space-sm py-1 rounded-lg" data-path="api-data-lingkungan" href="#">API Data Lingkungan</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all px-space-sm py-1 rounded-lg" data-path="kontak-kemitraan-hijau" href="#">Kontak Kemitraan Hijau</a>
+        </div>
+      </div>
+      <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+        <span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 EcoSmart Nusantara. Seluruh hak cipta dilindungi.</span>
+        <div class="flex items-center gap-space-md">
+          <span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span> Sistem Data Aktif &amp; Terverifikasi</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ecotracker.js"></script>
+</body>
+</html>

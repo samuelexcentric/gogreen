@@ -1,0 +1,892 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>EcoSmart - Kampanye &amp; Relawan Lingkungan</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+  
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 w-full px-margin flex items-center justify-between gap-gutter">
+      <a href="index.html" class="flex items-center gap-space-md shrink-0 group">
+        <img alt="EcoSmart Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VxnTWcVeBO48LyD2YOdYj6Zkq7S2xj4yOcODQ6aLW-WCrXOuVxUuB7M2O-aU8p0ttdZ4ikQ32bQnTo2FdrMi_1QAMliJTTudpzfWqjEDDFvosE7AxlaIWjtlOs4F-QKn7catXdGLLl9ySII3gKkFrq7Lzxv3hEl7aaLzh19-ZwxS7uh7BrBev5BvygbJyL3ghekbNDSaaQqR_VKZIHKWIEiaRob9Uyp-_S0OnwvJjMv_WRN6CXwQ5uV-J4"/>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">EcoSmart</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide uppercase">Digital Green Solutions</span>
+        </div>
+      </a>
+      <nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-semibold">
+        <a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="beranda-&-edukasi" href="index.html">Beranda &amp; Edukasi</a>
+        <a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="ecotracker" href="ecotracker.html">EcoTracker</a>
+        <a aria-current="page" class="px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container rounded-lg font-semibold" data-path="kampanye-&-relawan" href="kampanye.html">Kampanye &amp; Relawan</a>
+        <a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="katalog-bibit-&-donasi" href="katalog-bibit.html">Katalog Bibit &amp; Donasi</a>
+      </nav>
+      <div class="flex items-center gap-space-sm shrink-0">
+        <div class="hidden md:flex items-center gap-space-xs">
+          <div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
+            <span class="text-sm">🔥</span><span>14 Hari</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
+            <span class="text-sm">🌿</span><span>1.420 Poin</span>
+          </div>
+          <div class="flex items-center px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
+            Lvl 4: Eco Pioneer
+          </div>
+        </div>
+        <button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button" onclick="alert('Notifikasi: Kampanye Tanam Mangrove Muara Gembong tinggal tersisa 15 kuota!')">
+          <span class="material-symbols-outlined text-[20px]">notifications</span>
+          <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span>
+        </button>
+        <div class="flex items-center gap-space-xs pl-space-xs">
+          <a href="login.html" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-all" title="Masuk ke Akun">
+            <span class="material-symbols-outlined text-[16px]">login</span>
+            <span>Masuk</span>
+          </a>
+          <a href="ecotracker.html" title="Buka Profil EcoTracker">
+            <img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20 hover:ring-primary transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-4PYo7NvEaIVU5LIrGNDFcqtxP_gXmH_m4r__xqxylbYq6xCEBgN8gdPN9M08t72pz4U8-CeTzNBeSs_iOAkUZkKbevRg8SaHBg_7i3PY91HEuV4dwxJ6GB9eCzCZ2y_FuwUBVsQZrFqcrBDm4IPpT47Vc4qPMVqQ3ofBScsTyr5_lDEDw-R9H6p845PYO48Hcf3oBMHfcJz_K2yjDrRdT4iS0WQBdk9m9xD2TvsuGo7dB7HGQlunmA"/>
+          </a>
+        </div>
+        
+        <button class="xl:hidden w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container" id="mobileMenuBtn" type="button">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="hidden xl:hidden bg-surface-container-lowest border-t border-surface-container px-margin py-3 flex flex-col gap-2" id="mobileNavMenu">
+      <a class="px-space-md py-2 text-on-surface-variant hover:bg-surface-container rounded-lg font-semibold text-label-md" href="index.html">Beranda &amp; Edukasi</a>
+      <a class="px-space-md py-2 text-on-surface-variant hover:bg-surface-container rounded-lg font-semibold text-label-md" href="ecotracker.html">EcoTracker</a>
+      <a class="px-space-md py-2 bg-primary-container text-on-primary-container rounded-lg font-semibold text-label-md" href="kampanye.html">Kampanye &amp; Relawan</a>
+      <a class="px-space-md py-2 text-on-surface-variant hover:bg-surface-container rounded-lg font-semibold text-label-md" href="katalog-bibit.html">Katalog Bibit &amp; Donasi</a>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-background">
+    <div class="flex flex-col w-full">
+      
+      <section class="w-full px-margin-mobile md:px-margin pt-space-md pb-space-lg">
+        <div class="max-w-[1280px] mx-auto flex flex-col gap-space-lg">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div class="flex flex-col gap-space-xs max-w-2xl">
+              <div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span>18 Titik Aksi Komunitas Terverifikasi Pekan Ini</span>
+              </div>
+              <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+                Aksi Nyata di Lingkungan Sekitarmu
+              </h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Bergabunglah dengan ratusan relawan lokal, tanam pohon, bersihkan aliran sungai, dan bangun ruang terbuka hijau bersama.
+              </p>
+            </div>
+            
+            <div class="flex items-center gap-space-sm self-start md:self-auto shrink-0 flex-wrap">
+              <div class="bg-surface-container-lowest px-space-md py-space-sm rounded-xl shadow-sm flex items-center gap-space-sm">
+                <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[24px]">event_available</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-headline-sm text-headline-sm text-primary leading-none">42</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Event Bulan Ini</span>
+                </div>
+              </div>
+              <div class="bg-surface-container-lowest px-space-md py-space-sm rounded-xl shadow-sm flex items-center gap-space-sm">
+                <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                  <span class="material-symbols-outlined text-[24px]">group</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-headline-sm text-headline-sm text-secondary leading-none">2.400+</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Relawan Aktif</span>
+                </div>
+              </div>
+              <div class="bg-surface-container-lowest px-space-md py-space-sm rounded-xl shadow-sm flex items-center gap-space-sm">
+                <div class="w-10 h-10 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">
+                  <span class="material-symbols-outlined text-[22px]">forest</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-headline-sm text-headline-sm text-on-surface leading-none">12.000</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Pohon Siap Tanam</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest p-space-md md:p-space-lg rounded-xl shadow-sm">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+              
+              <div class="md:col-span-4 flex flex-col gap-1">
+                <label class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span> Wilayah Aksi
+                </label>
+                <div class="relative">
+                  <select class="w-full h-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md pr-10 appearance-none focus:outline-none focus:bg-surface-container-lowest transition-all" id="filter-region">
+                    <option value="all">Semua Wilayah</option>
+                    <option selected="" value="jakarta">Jakarta Selatan &amp; Sekitarnya</option>
+                    <option value="bandung">Bandung Raya</option>
+                    <option value="yogyakarta">D.I. Yogyakarta</option>
+                    <option value="surabaya">Surabaya &amp; Sidoarjo</option>
+                    <option value="denpasar">Denpasar &amp; Badung</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+                </div>
+              </div>
+              
+              <div class="md:col-span-3 flex flex-col gap-1">
+                <label class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px] text-primary">category</span> Kategori
+                </label>
+                <div class="relative">
+                  <select class="w-full h-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md pr-10 appearance-none focus:outline-none focus:bg-surface-container-lowest transition-all" id="filter-cat">
+                    <option value="all">Semua Kategori</option>
+                    <option value="pohon">Penanaman Pohon &amp; Mangrove</option>
+                    <option value="sungai">Bersih Pantai &amp; Sungai</option>
+                    <option value="edukasi">Edukasi Sekolah &amp; Workshop</option>
+                    <option value="sampah">Bank Sampah &amp; Daur Ulang</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+                </div>
+              </div>
+              
+              <div class="md:col-span-3 flex flex-col gap-1">
+                <label class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px] text-primary">calendar_month</span> Rentang Waktu
+                </label>
+                <div class="relative">
+                  <select class="w-full h-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md pr-10 appearance-none focus:outline-none focus:bg-surface-container-lowest transition-all" id="filter-time">
+                    <option value="weekend">Weekend Ini (15-16 Juli)</option>
+                    <option selected="" value="month">Bulan Ini (Juli 2025)</option>
+                    <option value="next-month">Bulan Depan</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+                </div>
+              </div>
+              
+              <div class="md:col-span-2 flex items-end">
+                <button class="w-full h-11 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg hover:bg-on-primary-fixed-variant transition-all flex items-center justify-center gap-space-xs shadow-sm" type="button" onclick="showToast('Filter berhasil diterapkan: Menampilkan 4 kampanye yang relevan!')">
+                  <span class="material-symbols-outlined text-[18px]">tune</span>
+                  <span>Terapkan</span>
+                </button>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-space-xs mt-space-md flex-wrap pt-space-sm">
+              <span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Rekomendasi Cepat:</span>
+              <button class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-all" onclick="showToast('Filter: Menampilkan kampanye radius < 10 km')" type="button">
+                🌱 Dekat Lokasiku (&lt; 10 km)
+              </button>
+              <button class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-all" onclick="showToast('Filter: Menampilkan aksi dengan fasilitas bus antar-jemput')" type="button">
+                🚌 Ada Bus Antar-Jemput
+              </button>
+              <button class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-all" onclick="showToast('Filter: Kuota tersisa < 15 slot')" type="button">
+                ⭐ Kuota Menipis (&lt; 15 Slot)
+              </button>
+              <button class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-all" onclick="showToast('Filter: Kampanye dengan bonus +150 EcoPoints')" type="button">
+                🏆 +150 EcoPoints Ekstra
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full px-margin-mobile md:px-margin py-space-md">
+        <div class="max-w-[1280px] mx-auto bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-sm">
+          <div class="flex flex-col lg:flex-row gap-space-lg">
+            
+            <div class="lg:w-7/12 flex flex-col gap-space-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-space-xs">
+                  <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                  <span class="font-title-md text-title-md text-on-surface">Peta Titik Aksi Hijau Terdekat</span>
+                </div>
+                <span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px] text-primary">my_location</span> Radius 35 km
+                </span>
+              </div>
+              <div class="relative rounded-xl overflow-hidden shadow-sm aspect-[16/10] bg-surface-container">
+                <div class="w-full h-full bg-cover bg-center" data-location="Jakarta, Indonesia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoev64J4skrMTQXMuNC_vQztnTMpuQ6weXOHN6x4OYAv0flh-Tlxt0jsYC9pLVXsJBaqGDL5ZFfNUylceF7ZgSXLQWS1zvmFfCBD_QpDXIVn9v5rBmO4fyWfIq8aZIfab11oso3_2aDu4UxPG9O3dGx4pFigLrOxWcJ2_XzU6rzlkTVAK7SHKLu_7nZpKtVeZXC0x8tpPq1Ivnv9cI0V4SpCwk0WEqjd0pjglQHpJ4QLQ5HqT2tVRReg')"></div>
+                
+                <div class="absolute inset-0 bg-primary/10 pointer-events-none backdrop-blur-[1px]"></div>
+                
+                <div class="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer" onclick="openVolunteerModal('Gerakan Tanam 1.000 Mangrove Pesisir Muara Gembong', 'Sabtu, 15 Juli 2025')">
+                  <div class="relative flex items-center justify-center">
+                    <span class="absolute w-8 h-8 rounded-full bg-primary/40 animate-ping"></span>
+                    <span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                      <span class="material-symbols-outlined text-[16px]">park</span>
+                    </span>
+                  </div>
+                  <div class="mt-1 px-space-sm py-0.5 rounded bg-inverse-surface/90 text-inverse-on-surface font-label-sm text-label-sm whitespace-nowrap shadow-md">
+                    Muara Gembong (85%)
+                  </div>
+                </div>
+                
+                <div class="absolute top-3/5 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer" onclick="openVolunteerModal('Aksi Bersih Sungai & Urban Farming Bantaran Ciliwung', 'Minggu, 20 Juli 2025')">
+                  <div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-[14px]">water_drop</span>
+                  </div>
+                  <div class="mt-1 px-space-sm py-0.5 rounded bg-inverse-surface/90 text-inverse-on-surface font-label-sm text-label-sm whitespace-nowrap shadow-md">
+                    Bantaran Ciliwung
+                  </div>
+                </div>
+                
+                <div class="absolute bottom-1/4 right-1/4 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer" onclick="openVolunteerModal('Workshop Pembuatan Kompos & Biopori Kelurahan', 'Sabtu, 26 Juli 2025')">
+                  <div class="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-[14px]">compost</span>
+                  </div>
+                  <div class="mt-1 px-space-sm py-0.5 rounded bg-inverse-surface/90 text-inverse-on-surface font-label-sm text-label-sm whitespace-nowrap shadow-md">
+                    Biopori Sukamaju
+                  </div>
+                </div>
+                
+                <div class="absolute bottom-3 left-3 bg-surface/95 backdrop-blur-md px-space-md py-space-xs rounded-lg shadow-sm flex items-center gap-space-sm">
+                  <div class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></div>
+                  <span class="font-label-sm text-label-sm text-on-surface font-semibold">Live GPS Tracker Aktif</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Update: 2 mnt lalu</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:w-5/12 flex flex-col justify-between gap-space-md">
+              <div class="flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between pb-space-xs">
+                  <span class="font-title-md text-title-md text-on-surface">Aktivitas Relawan Terkini</span>
+                  <span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px]">sensors</span> Real-time
+                  </span>
+                </div>
+                
+                <div class="flex flex-col gap-space-xs">
+                  <div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+                    <div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0 font-label-sm text-label-sm font-bold">
+                      BD
+                    </div>
+                    <div class="flex flex-col min-w-0 flex-1">
+                      <div class="flex items-center justify-between">
+                        <span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Budi Santoso</span>
+                        <span class="font-label-sm text-label-sm text-on-surface-variant">1m lalu</span>
+                      </div>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+                        Menanam <span class="font-semibold text-primary">3 Bibit Tabebuya</span> di Koridor Timur Surabaya.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+                    <div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 font-label-sm text-label-sm font-bold">
+                      KH
+                    </div>
+                    <div class="flex flex-col min-w-0 flex-1">
+                      <div class="flex items-center justify-between">
+                        <span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Komunitas Hijau BDG</span>
+                        <span class="font-label-sm text-label-sm text-on-surface-variant">7m lalu</span>
+                      </div>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+                        Menyelesaikan <span class="font-semibold text-secondary">50 Lubang Biopori Resapan</span> di Babakan Siliwangi.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+                    <div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0 font-label-sm text-label-sm font-bold">
+                      SR
+                    </div>
+                    <div class="flex flex-col min-w-0 flex-1">
+                      <div class="flex items-center justify-between">
+                        <span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Sarah Amelia</span>
+                        <span class="font-label-sm text-label-sm text-on-surface-variant">14m lalu</span>
+                      </div>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+                        Mengklaim badge <span class="font-semibold text-tertiary">Relawan Teladan Lvl 4</span> (+300 EXP).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="bg-surface-container p-space-md rounded-xl flex items-center justify-between gap-space-md">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Capaian Gotong Royong</span>
+                  <span class="font-headline-sm text-headline-sm text-primary">8.420 kg Sampah</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Telah dievakuasi dari bantaran sungai sejak Juni.</span>
+                </div>
+                
+                <div class="w-16 h-16 shrink-0 relative flex items-center justify-center">
+                  <svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+                    <circle class="text-surface-container-highest stroke-current" cx="18" cy="18" fill="none" r="15.5" stroke-width="3"></circle>
+                    <circle class="text-primary stroke-current" cx="18" cy="18" fill="none" r="15.5" stroke-dasharray="100" stroke-dashoffset="28" stroke-linecap="round" stroke-width="3"></circle>
+                  </svg>
+                  <span class="absolute font-label-sm text-label-sm font-bold text-primary">72%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full px-margin-mobile md:px-margin py-space-lg">
+        <div class="max-w-[1280px] mx-auto flex flex-col gap-space-lg">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+            <div>
+              <span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Aksi Terbuka</span>
+              <h2 class="font-headline-md text-headline-md text-on-surface">Pilihan Kampanye Lingkungan Terdekat</h2>
+            </div>
+            <div class="flex items-center gap-space-xs">
+              <button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-all" onclick="showToast('Urutan disesuaikan berdasarkan jarak terdekat')" type="button">
+                Urutkan Terdekat
+              </button>
+              <button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-all" onclick="showToast('Urutan disesuaikan berdasarkan tanggal paling mendesak')" type="button">
+                Paling Mendesak
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-space-lg">
+            
+            <article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col relative">
+              <div class="h-1 bg-primary w-full"></div>
+              <div class="relative h-56 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover" data-alt="A lively group of diverse Indonesian young volunteers planting green mangrove seedlings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX2cyAFBM_YkgwlRihEtg2YiKsmeQ7Gli0rwsrXc2Qx0LzS4w1eKtVunfzTEwWgjGWnoQTnr5muLRZLaHvjZ-JDT1l_BP_d_wSUJDlsNnx2CqMOC3tKbOmZEy8tG1KAAvfbZU6dUQy_h2PugS-nc203ZTadTb7Z3IiOfisjuUosN4KJEBHm6rIr8wDqr8KbPAZafxFPg8kjjNSLbVcxSPZ4dGq_OBLto1BTxJ-wGtZEVbN4GYz-jxGBA"/>
+                <div class="absolute top-3 left-3 flex items-center gap-space-xs">
+                  <span class="px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm">
+                    Mangrove Restoration
+                  </span>
+                  <span class="px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold shadow-sm">
+                    +150 Poin
+                  </span>
+                </div>
+                <div class="absolute bottom-3 right-3 px-space-sm py-1 rounded-lg bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+                  <span class="material-symbols-outlined text-[16px] text-primary">directions_bus</span> Bus Tersedia
+                </div>
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span> Sabtu, 15 Juli 2025
+                    </span>
+                    <span>•</span>
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px] text-primary">schedule</span> 07:00 - 12:00 WIB
+                    </span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">
+                    Gerakan Tanam 1.000 Mangrove Pesisir Muara Gembong
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Selamatkan kawasan pesisir utara dari abrasi laut Jawa. Disediakan titik kumpul bus bersama di Cawang &amp; Bekasi Barat.
+                  </p>
+                  
+                  <div class="flex flex-wrap gap-1.5 pt-space-xs">
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">📜 Sertifikat Digital</span>
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">🌱 Bibit &amp; Sarung Tangan</span>
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">🍱 Makan Siang Sehat</span>
+                  </div>
+                </div>
+                
+                <div class="flex flex-col gap-space-sm pt-space-sm">
+                  <div class="flex flex-col gap-1.5">
+                    <div class="flex justify-between font-label-sm text-label-sm">
+                      <span class="text-on-surface font-semibold">Kuota Relawan: 85 / 100 Terisi</span>
+                      <span class="text-primary font-bold">Tersisa 15 Kursi</span>
+                    </div>
+                    <div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+                      <div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 85%;"></div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-space-sm pt-space-xs">
+                    <button class="flex-1 h-11 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg hover:bg-on-primary-fixed-variant transition-all flex items-center justify-center gap-space-xs shadow-sm" onclick="openVolunteerModal('Gerakan Tanam 1.000 Mangrove Pesisir Muara Gembong', '15 Juli 2025')" type="button">
+                      <span class="material-symbols-outlined text-[18px]">volunteer_activism</span>
+                      <span>Daftar Relawan Sekarang</span>
+                    </button>
+                    <button class="w-11 h-11 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" onclick="navigator.clipboard.writeText(window.location.href); showToast('Tautan kampanye disalin ke clipboard!');" title="Bagikan ke Teman" type="button">
+                      <span class="material-symbols-outlined text-[20px]">share</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col relative">
+              <div class="h-1 bg-secondary w-full"></div>
+              <div class="relative h-56 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover" data-alt="Energetic community volunteers cleaning plastic waste at Tebet Eco Park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK4xfLjssTIij4a3tMSD7MIfuklHj6aPfuh9AGkrAq19e2Jfjbmb8xGaqFQXWvuYywc6-9giRbR6PH__NLrIKQQQhndxNnQ8kngQd5rRYvVSx284_p5OsizL4K8pokclSjboNMJ10OWEG-ifeXR1KYltx_Ebm2-YjwovGoLBIzzIJ4pc7Ugm9n0HoCm59_MJxNmhm-6z31l0gf6yG2w3ARKQTBOvtc_7Y6ujcU2srnd2ew5Vo-HRj_Fg"/>
+                <div class="absolute top-3 left-3 flex items-center gap-space-xs">
+                  <span class="px-space-sm py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold shadow-sm">
+                    Sungai &amp; Kebun Kota
+                  </span>
+                  <span class="px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">
+                    +120 Poin
+                  </span>
+                </div>
+                <div class="absolute bottom-3 right-3 px-space-sm py-1 rounded-lg bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">park</span> Tebet Eco Park
+                </div>
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span> Minggu, 20 Juli 2025
+                    </span>
+                    <span>•</span>
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px] text-secondary">schedule</span> 06:30 - 10:30 WIB
+                    </span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">
+                    Aksi Bersih Sungai &amp; Urban Farming Bantaran Ciliwung
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Revitalisasi sempadan sungai bersama warga lokal. Kegiatan mencakup pemilahan plastik, pembuatan bedengan sayur organik, dan edukasi biopori.
+                  </p>
+                  
+                  <div class="flex flex-wrap gap-1.5 pt-space-xs">
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">🌱 Bibit Selada &amp; Cabai</span>
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">🦺 Rompi &amp; Boots Lapangan</span>
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">📜 E-Certificate</span>
+                  </div>
+                </div>
+                
+                <div class="flex flex-col gap-space-sm pt-space-sm">
+                  <div class="flex flex-col gap-1.5">
+                    <div class="flex justify-between font-label-sm text-label-sm">
+                      <span class="text-on-surface font-semibold">Kuota Relawan: 45 / 50 Terisi</span>
+                      <span class="text-secondary font-bold">Hanya 5 Slot Tersisa</span>
+                    </div>
+                    <div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+                      <div class="h-full bg-secondary rounded-full transition-all duration-500" style="width: 90%;"></div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-space-sm pt-space-xs">
+                    <button class="flex-1 h-11 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg hover:bg-on-primary-fixed-variant transition-all flex items-center justify-center gap-space-xs shadow-sm" onclick="openVolunteerModal('Aksi Bersih Sungai &amp; Urban Farming Bantaran Ciliwung', '20 Juli 2025')" type="button">
+                      <span class="material-symbols-outlined text-[18px]">volunteer_activism</span>
+                      <span>Daftar Relawan</span>
+                    </button>
+                    <button class="w-11 h-11 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" onclick="navigator.clipboard.writeText(window.location.href); showToast('Tautan kampanye disalin ke clipboard!');" title="Bagikan ke Teman" type="button">
+                      <span class="material-symbols-outlined text-[20px]">share</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col relative">
+              <div class="h-1 bg-tertiary-container w-full"></div>
+              <div class="relative h-56 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover" data-alt="Hands-on community gardening workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXmkyw3r45nESRAsuawDZ8QLaEkcmDtcvqlYppV-c8wD1Dpnauc6ZcXE-TjmAkOG4qg1sOhSygCdMRZYIqgn5ffp3BWd9AR6Xh9gTWnD-glCcXlV98W4GFLnTR8BpnHOUJGy7xDLavvP0cJkrRUROUQ1FD85V-VAa2MOXwttZ-ZVoQcpqQKvlUhTx6E0u9WlTIo3eW4BhGVT00jjPgfjTiKWy0TOeG-ri9q7PKpcET-sSYnfDnTMOmTQ"/>
+                <div class="absolute top-3 left-3 flex items-center gap-space-xs">
+                  <span class="px-space-sm py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold shadow-sm">
+                    Edukasi &amp; Workshop
+                  </span>
+                  <span class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold shadow-sm">
+                    Gratis
+                  </span>
+                </div>
+                <div class="absolute bottom-3 right-3 px-space-sm py-1 rounded-lg bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+                  <span class="material-symbols-outlined text-[16px] text-tertiary">location_on</span> Balai Warga Sukamaju
+                </div>
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px] text-tertiary">calendar_today</span> Sabtu, 26 Juli 2025
+                    </span>
+                    <span>•</span>
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span> 09:00 - 12:00 WIB
+                    </span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">
+                    Workshop Pembuatan Kompos &amp; Biopori Kelurahan Hijau
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Pelajari metode komposting rumah tangga tanpa bau dengan biokonversi maggot BSF dan bor lubang resapan biopori mandiri di halaman sendiri.
+                  </p>
+                  
+                  <div class="flex flex-wrap gap-1.5 pt-space-xs">
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">🪱 Starter Mikroba Kompos</span>
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">📘 Modul Praktis PDF</span>
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">☕ Coffee &amp; Snacks</span>
+                  </div>
+                </div>
+                
+                <div class="flex flex-col gap-space-sm pt-space-sm">
+                  <div class="flex flex-col gap-1.5">
+                    <div class="flex justify-between font-label-sm text-label-sm">
+                      <span class="text-on-surface font-semibold">Kuota Relawan: 30 / 40 Terisi</span>
+                      <span class="text-tertiary font-bold">10 Slot Tersedia</span>
+                    </div>
+                    <div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+                      <div class="h-full bg-tertiary rounded-full transition-all duration-500" style="width: 75%;"></div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-space-sm pt-space-xs">
+                    <button class="flex-1 h-11 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg hover:bg-on-primary-fixed-variant transition-all flex items-center justify-center gap-space-xs shadow-sm" onclick="openVolunteerModal('Workshop Pembuatan Kompos &amp; Biopori Kelurahan', '26 Juli 2025')" type="button">
+                      <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+                      <span>Daftar Gratis</span>
+                    </button>
+                    <button class="w-11 h-11 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" onclick="navigator.clipboard.writeText(window.location.href); showToast('Tautan kampanye disalin ke clipboard!');" title="Bagikan ke Teman" type="button">
+                      <span class="material-symbols-outlined text-[20px]">share</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col relative">
+              <div class="h-1 bg-tertiary-fixed-dim w-full"></div>
+              <div class="relative h-56 w-full overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover" data-alt="Nursery seedlings of Indonesian shade trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIp7DYAanrByAYN3Ynyre-paHwEmT2tEN4v_7bF9sa7FmvQtkO6xz7Ir5sLgQY76LLf3G7PifEvgo452iu1hUpIEWa9uA74HZJmIpne4jJcTUcuUueBPkhmLHXO2vZUgLyvgqiYFaGPQHeC8_GHBN6F7IQLZPcsKUOGT6ssaRr2e_IWgFUr-BpItYdn8l9cizjauFcXF5ZpV3x1uByzIqHaL8XNtkRN_4htKRsCy4Z3IduW8g0Pk2ptg"/>
+                <div class="absolute top-3 left-3 flex items-center gap-space-xs">
+                  <span class="px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold shadow-sm">
+                    Donasi &amp; Geotagging
+                  </span>
+                  <span class="px-space-sm py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">
+                    Mulai Rp 25.000
+                  </span>
+                </div>
+                <div class="absolute bottom-3 right-3 px-space-sm py-1 rounded-lg bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+                  <span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span> Geotag Dashboard
+                </div>
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px] text-primary">all_inclusive</span> Program Berkelanjutan
+                    </span>
+                    <span>•</span>
+                    <span class="flex items-center gap-1 text-primary font-semibold">
+                      <span class="material-symbols-outlined text-[16px]">qr_code_scanner</span> Monitoring Berkala 3 Tahun
+                    </span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">
+                    Adopsi Bibit Pohon Peneduh Jalan Kota
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Tidak sempat turun ke lapangan? Adopsi pohon peneduh (Tabebuya, Kiara Payung, Ketapang Kencana) yang ditanam oleh relawan dan dipantau berkala via satelit geotagging.
+                  </p>
+                  
+                  <div class="flex flex-wrap gap-1.5 pt-space-xs">
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">📍 Koordinat GPS Pohon</span>
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">📸 Foto Tumbuh Bulanan</span>
+                    <span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">🏷️ Plakat Nama Digital</span>
+                  </div>
+                </div>
+                
+                <div class="flex flex-col gap-space-sm pt-space-sm">
+                  <div class="flex flex-col gap-1.5">
+                    <div class="flex justify-between font-label-sm text-label-sm">
+                      <span class="text-on-surface font-semibold">Target Kampanye: 1.280 / 2.000 Pohon</span>
+                      <span class="text-primary font-bold">64% Tercapai</span>
+                    </div>
+                    <div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+                      <div class="h-full bg-primary-container rounded-full transition-all duration-500" style="width: 64%;"></div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-space-sm pt-space-xs">
+                    <a class="flex-1 h-11 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg hover:bg-on-primary-fixed-variant transition-all flex items-center justify-center gap-space-xs shadow-sm" href="katalog-bibit.html">
+                      <span class="material-symbols-outlined text-[18px]">nature_people</span>
+                      <span>Adopsi di Katalog Bibit</span>
+                    </a>
+                    <button class="w-11 h-11 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" onclick="showToast('Menampilkan sebaran geotagging bibit pohon di Jabodetabek')" title="Lihat Peta Pohon" type="button">
+                      <span class="material-symbols-outlined text-[20px]">map</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full px-margin-mobile md:px-margin py-space-md">
+        <div class="max-w-[1280px] mx-auto bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-sm">
+          <div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md gap-space-xs">
+            <div>
+              <span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Apresiasi Relawan</span>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface">Pahlawan Lingkungan Pekan Ini</h3>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+              Aktivitas relawan terverifikasi secara on-chain dan terdata di basis data aksi iklim nasional.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+            
+            <div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm relative">
+              <div class="flex items-center gap-space-sm">
+                <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-on-primary-fixed text-headline-sm">
+                  🥇
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-title-md text-title-md text-on-surface truncate">Rian Setiadi</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">Bandung Barat</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center pt-space-xs text-on-surface">
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Aksi Dituntaskan</span>
+                <span class="font-label-lg text-label-lg font-bold text-primary">18 Aksi</span>
+              </div>
+              <div class="flex justify-between items-center text-on-surface">
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Poin Hijau</span>
+                <span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold">+2.840 Pts</span>
+              </div>
+            </div>
+            
+            <div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm relative">
+              <div class="flex items-center gap-space-sm">
+                <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container text-headline-sm">
+                  🥈
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-title-md text-title-md text-on-surface truncate">Nadia Pratiwi</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">Jakarta Selatan</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center pt-space-xs text-on-surface">
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Aksi Dituntaskan</span>
+                <span class="font-label-lg text-label-lg font-bold text-secondary">15 Aksi</span>
+              </div>
+              <div class="flex justify-between items-center text-on-surface">
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Poin Hijau</span>
+                <span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold">+2.310 Pts</span>
+              </div>
+            </div>
+            
+            <div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm relative">
+              <div class="flex items-center gap-space-sm">
+                <div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center font-bold text-on-tertiary-fixed text-headline-sm">
+                  🥉
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-title-md text-title-md text-on-surface truncate">Komunitas Kali Bersih</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">Yogyakarta</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center pt-space-xs text-on-surface">
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Aksi Dituntaskan</span>
+                <span class="font-label-lg text-label-lg font-bold text-tertiary">12 Aksi</span>
+              </div>
+              <div class="flex justify-between items-center text-on-surface">
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Poin Hijau</span>
+                <span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">+1.950 Pts</span>
+              </div>
+            </div>
+            
+            <div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm relative">
+              <div class="flex items-center gap-space-sm">
+                <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface text-label-lg">
+                  #4
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-title-md text-title-md text-on-surface truncate">Fajar Nugraha</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">Surabaya Barat</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center pt-space-xs text-on-surface">
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Aksi Dituntaskan</span>
+                <span class="font-label-lg text-label-lg font-bold text-primary">10 Aksi</span>
+              </div>
+              <div class="flex justify-between items-center text-on-surface">
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Poin Hijau</span>
+                <span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold">+1.620 Pts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full px-margin-mobile md:px-margin py-space-xl">
+        <div class="max-w-[1280px] mx-auto bg-primary text-on-primary rounded-xl p-space-lg md:p-space-xl shadow-lg relative overflow-hidden">
+          
+          <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-white/5 pointer-events-none blur-3xl"></div>
+          <div class="absolute top-0 right-1/3 w-64 h-64 rounded-full bg-secondary-container/10 pointer-events-none blur-2xl"></div>
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+            
+            <div class="lg:col-span-6 flex flex-col gap-space-md">
+              <div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm self-start font-bold">
+                🌱 Program Mitra Komunitas &amp; RT/RW
+              </div>
+              <h2 class="font-headline-lg text-headline-lg font-bold tracking-tight text-white">
+                Punya Rencana Aksi Hijau di Lingkunganmu? Inisiasi Sekarang.
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-primary-container">
+                EcoSmart membantu pengurus RT, RW, komunitas pecinta alam, dan sekolah mempublikasikan aksi, mengelola absensi relawan digital, dan mendistribusikan logistik bibit gratis.
+              </p>
+              
+              <div class="flex flex-col gap-space-sm pt-space-xs">
+                <div class="flex items-start gap-space-sm">
+                  <span class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0">1</span>
+                  <div class="flex flex-col">
+                    <span class="font-title-md text-title-md font-semibold text-white">Ajukan Proposal Singkat</span>
+                    <span class="font-body-sm text-body-sm text-on-primary-container">Isi formulir titik lokasi, target luasan, dan perkiraan kuota relawan.</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm">
+                  <span class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0">2</span>
+                  <div class="flex flex-col">
+                    <span class="font-title-md text-title-md font-semibold text-white">Verifikasi Lapangan 1x24 Jam</span>
+                    <span class="font-body-sm text-body-sm text-on-primary-container">Tim EcoSmart meninjau kelayakan &amp; menyelaraskan dukungan donasi bibit lokal.</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm">
+                  <span class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0">3</span>
+                  <div class="flex flex-col">
+                    <span class="font-title-md text-title-md font-semibold text-white">Kampanye Live &amp; QR Presensi Otomatis</span>
+                    <span class="font-body-sm text-body-sm text-on-primary-container">Relawan terdekat menerima notifikasi dan bergabung langsung.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 bg-surface-container-lowest text-on-surface rounded-xl p-space-lg shadow-xl">
+              <form class="flex flex-col gap-space-md" id="campaign-init-form" onsubmit="handleCampaignSubmit(event)">
+                <div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+                  <span class="font-title-md text-title-md text-on-surface font-bold">Draft Inisiasi Aksi Mandiri</span>
+                  <span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-semibold">Langkah 1 dari 2</span>
+                </div>
+                
+                <div class="flex flex-col gap-1">
+                  <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Nama Kampanye / Kegiatan Lingkungan</label>
+                  <input class="w-full h-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Contoh: Bersih Sungai Kalimas &amp; Reboisasi Warga RT 04" required="" type="text"/>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                  <div class="flex flex-col gap-1">
+                    <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Kabupaten / Kota</label>
+                    <input class="w-full h-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Contoh: Bandung Barat" required="" type="text"/>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Estimasi Kuota Relawan</label>
+                    <input class="w-full h-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md focus:outline-none focus:bg-surface-container-lowest transition-all" max="500" min="5" placeholder="Contoh: 30 Orang" required="" type="number"/>
+                  </div>
+                </div>
+                
+                <div class="flex flex-col gap-1">
+                  <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Bantuan yang Diperlukan dari EcoSmart</label>
+                  <div class="grid grid-cols-2 gap-2 text-label-sm">
+                    <label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+                      <input checked="" class="accent-primary w-4 h-4" type="checkbox"/>
+                      <span>Bibit Pohon Gratis</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+                      <input checked="" class="accent-primary w-4 h-4" type="checkbox"/>
+                      <span>Sertifikat Digital</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+                      <input class="accent-primary w-4 h-4" type="checkbox"/>
+                      <span>Kantong Sampah Ramah Lingkungan</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+                      <input class="accent-primary w-4 h-4" type="checkbox"/>
+                      <span>Fasilitator Pemateri</span>
+                    </label>
+                  </div>
+                </div>
+                
+                <button class="w-full h-12 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg hover:bg-on-primary-fixed-variant transition-all flex items-center justify-center gap-space-xs shadow-md mt-space-xs" type="submit">
+                  <span class="material-symbols-outlined text-[20px]">send</span>
+                  <span>Kirimkan Usulan Kampanye</span>
+                </button>
+                <p class="font-body-sm text-body-sm text-on-surface-variant text-center">
+                  Tidak dipungut biaya apapun. EcoSmart bermitra dengan Kementerian LHK &amp; Badan Restorasi Gambut.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300" id="volunteer-modal">
+        <div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-lg shadow-2xl flex flex-col gap-space-md transform scale-95 transition-transform duration-300">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-space-xs text-primary font-title-md text-title-md font-bold">
+              <span class="material-symbols-outlined">how_to_reg</span>
+              <span>Konfirmasi Pendaftaran Relawan</span>
+            </div>
+            <button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeVolunteerModal()" type="button">
+              <span class="material-symbols-outlined text-[20px]">close</span>
+            </button>
+          </div>
+          <div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Kampanye yang Dipilih:</span>
+            <span class="font-title-md text-title-md text-on-surface font-bold" id="modal-campaign-name">Gerakan Tanam 1.000 Mangrove</span>
+            <span class="font-body-sm text-body-sm text-primary font-semibold flex items-center gap-1" id="modal-campaign-date">
+              <span class="material-symbols-outlined text-[16px]">calendar_today</span> 15 Juli 2025
+            </span>
+          </div>
+          <div class="flex flex-col gap-space-sm">
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Nomor WhatsApp Aktif (Untuk Koordinasi Titik Kumpul)</label>
+              <input class="w-full h-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md focus:outline-none focus:bg-surface-container-lowest transition-all" id="volunteer-phone" type="tel" value="+62 812-3456-7890"/>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Pilihan Titik Jemput Bersama</label>
+              <select class="w-full h-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md appearance-none focus:outline-none" id="volunteer-shuttle">
+                <option>Halte TransJakarta Cawang Sentral (Bus 1)</option>
+                <option>Mega Bekasi Hypermall (Bus 2)</option>
+                <option>Langsung ke Lokasi Lapangan (Mandiri)</option>
+              </select>
+            </div>
+            <div class="flex items-center gap-2 pt-space-xs">
+              <input checked="" class="accent-primary w-4 h-4" id="modal-agree" type="checkbox"/>
+              <label class="font-body-sm text-body-sm text-on-surface-variant" for="modal-agree">Saya bersedia mengikuti SOP keselamatan &amp; hadir tepat waktu.</label>
+            </div>
+          </div>
+          <div class="flex items-center justify-end gap-space-sm pt-space-xs">
+            <button class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-all" onclick="closeVolunteerModal()" type="button">
+              Batal
+            </button>
+            <button class="px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-all shadow-sm flex items-center gap-1" onclick="confirmVolunteerRegistration()" type="button">
+              <span class="material-symbols-outlined text-[18px]">verified</span>
+              <span>Konfirmasi Sekarang</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-lg py-space-md rounded-xl shadow-xl flex items-center gap-space-sm hidden opacity-0 transition-opacity duration-300" id="toast-notification">
+        <span class="material-symbols-outlined text-secondary-container">check_circle</span>
+        <span class="font-body-md text-body-md font-medium" id="toast-message">Berhasil mendaftar relawan! Tiket dan barcode telah dikirim ke WhatsApp Anda.</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.02)] mt-space-xl">
+    <div class="w-full px-margin py-space-xl">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-space-lg pb-space-lg">
+        <div class="flex flex-col items-center md:items-start gap-space-xs">
+          <div class="flex items-center gap-space-sm">
+            <img alt="EcoSmart Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VxnTWcVeBO48LyD2YOdYj6Zkq7S2xj4yOcODQ6aLW-WCrXOuVxUuB7M2O-aU8p0ttdZ4ikQ32bQnTo2FdrMi_1QAMliJTTudpzfWqjEDDFvosE7AxlaIWjtlOs4F-QKn7catXdGLLl9ySII3gKkFrq7Lzxv3hEl7aaLzh19-ZwxS7uh7BrBev5BvygbJyL3ghekbNDSaaQqR_VKZIHKWIEiaRob9Uyp-_S0OnwvJjMv_WRN6CXwQ5uV-J4"/>
+            <span class="font-title-md text-title-md text-primary font-bold">EcoSmart</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left max-w-sm">Pemberdayaan aksi iklim nyata melalui inovasi digital, edukasi mandiri, dan pelacakan jejak karbon kolaboratif.</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-space-lg">
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all px-space-sm py-1 rounded-lg" data-path="panduan-komunitas" href="#">EcoCommunity Guidelines</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all px-space-sm py-1 rounded-lg" data-path="api-data-lingkungan" href="#">API Data Lingkungan</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all px-space-sm py-1 rounded-lg" data-path="kontak-kemitraan-hijau" href="#">Kontak Kemitraan Hijau</a>
+        </div>
+      </div>
+      <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+        <span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 EcoSmart Nusantara. Seluruh hak cipta dilindungi.</span>
+        <div class="flex items-center gap-space-md">
+          <span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span> Sistem Data Aktif &amp; Terverifikasi</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/kampanye.js"></script>
+</body>
+</html>

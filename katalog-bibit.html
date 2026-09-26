@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>EcoSmart - Katalog Bibit &amp; Donasi Pohon</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+  
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 w-full px-margin flex items-center justify-between gap-gutter">
+      <a href="index.html" class="flex items-center gap-space-md shrink-0 group">
+        <img alt="EcoSmart Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VxnTWcVeBO48LyD2YOdYj6Zkq7S2xj4yOcODQ6aLW-WCrXOuVxUuB7M2O-aU8p0ttdZ4ikQ32bQnTo2FdrMi_1QAMliJTTudpzfWqjEDDFvosE7AxlaIWjtlOs4F-QKn7catXdGLLl9ySII3gKkFrq7Lzxv3hEl7aaLzh19-ZwxS7uh7BrBev5BvygbJyL3ghekbNDSaaQqR_VKZIHKWIEiaRob9Uyp-_S0OnwvJjMv_WRN6CXwQ5uV-J4"/>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">EcoSmart</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide uppercase">Digital Green Solutions</span>
+        </div>
+      </a>
+      <nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-semibold">
+        <a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="beranda-&-edukasi" href="index.html">Beranda &amp; Edukasi</a>
+        <a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="ecotracker" href="ecotracker.html">EcoTracker</a>
+        <a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="kampanye-&-relawan" href="kampanye.html">Kampanye &amp; Relawan</a>
+        <a aria-current="page" class="px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container rounded-lg font-semibold" data-path="katalog-bibit-&-donasi" href="katalog-bibit.html">Katalog Bibit &amp; Donasi</a>
+      </nav>
+      <div class="flex items-center gap-space-sm shrink-0">
+        <div class="hidden md:flex items-center gap-space-xs">
+          <div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
+            <span class="text-sm">🔥</span><span>14 Hari</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
+            <span class="text-sm">🌿</span><span>1.420 Poin</span>
+          </div>
+          <div class="flex items-center px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
+            Lvl 4: Eco Pioneer
+          </div>
+        </div>
+        <button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button" onclick="alert('Notifikasi: Program penanaman Mangrove batch #14 akan dimulai akhir pekan ini!')">
+          <span class="material-symbols-outlined text-[20px]">notifications</span>
+          <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span>
+        </button>
+        <div class="flex items-center gap-space-xs pl-space-xs">
+          <a href="login.html" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-all" title="Masuk ke Akun">
+            <span class="material-symbols-outlined text-[16px]">login</span>
+            <span>Masuk</span>
+          </a>
+          <a href="ecotracker.html" title="Buka Profil EcoTracker">
+            <img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20 hover:ring-primary transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-4PYo7NvEaIVU5LIrGNDFcqtxP_gXmH_m4r__xqxylbYq6xCEBgN8gdPN9M08t72pz4U8-CeTzNBeSs_iOAkUZkKbevRg8SaHBg_7i3PY91HEuV4dwxJ6GB9eCzCZ2y_FuwUBVsQZrFqcrBDm4IPpT47Vc4qPMVqQ3ofBScsTyr5_lDEDw-R9H6p845PYO48Hcf3oBMHfcJz_K2yjDrRdT4iS0WQBdk9m9xD2TvsuGo7dB7HGQlunmA"/>
+          </a>
+        </div>
+        
+        <button class="xl:hidden w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container" id="mobileMenuBtn" type="button">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="hidden xl:hidden bg-surface-container-lowest border-t border-surface-container px-margin py-3 flex flex-col gap-2" id="mobileNavMenu">
+      <a class="px-space-md py-2 text-on-surface-variant hover:bg-surface-container rounded-lg font-semibold text-label-md" href="index.html">Beranda &amp; Edukasi</a>
+      <a class="px-space-md py-2 text-on-surface-variant hover:bg-surface-container rounded-lg font-semibold text-label-md" href="ecotracker.html">EcoTracker</a>
+      <a class="px-space-md py-2 text-on-surface-variant hover:bg-surface-container rounded-lg font-semibold text-label-md" href="kampanye.html">Kampanye &amp; Relawan</a>
+      <a class="px-space-md py-2 bg-primary-container text-on-primary-container rounded-lg font-semibold text-label-md" href="katalog-bibit.html">Katalog Bibit &amp; Donasi</a>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-background">
+    <div class="flex flex-col w-full">
+      
+      <section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-background to-background px-margin py-space-xl md:py-20">
+        <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+        <div class="absolute left-1/4 -bottom-20 w-80 h-80 rounded-full bg-tertiary-fixed/15 blur-3xl pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
+          <div class="inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface shadow-sm mb-space-md">
+            <span class="flex h-2.5 w-2.5 rounded-full bg-primary animate-pulse"></span>
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">100% Geotagged &amp; Terverifikasi Satelit</span>
+            <span class="text-outline-variant text-xs">•</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Garansi Perawatan 3 Tahun</span>
+          </div>
+          <h1 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface tracking-tight max-w-4xl">
+            Adopsi Bibit &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Donasi Pohon Nusantara</span>
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-md">
+            Tanam pohon dari genggaman Anda. Setiap donasi bibit dialokasikan ke kelompok tani hutan mitra, diberi plakat nama digital, dan dipantau pertumbuhannya via koordinat GPS.
+          </p>
+
+          <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-space-md mt-space-xl pt-space-md">
+            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
+              <span class="font-headline-sm text-headline-sm text-primary font-extrabold">86.420+</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Bibit Tersalurkan</span>
+            </div>
+            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
+              <span class="font-headline-sm text-headline-sm text-secondary font-extrabold">94.8%</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Tingkat Hidup Bibit</span>
+            </div>
+            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
+              <span class="font-headline-sm text-headline-sm text-tertiary font-extrabold">18 Nursery</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Mitra BPDAS &amp; KTH</span>
+            </div>
+            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
+              <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">3 Tahun</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1 uppercase tracking-wider">Garansi Re-planting</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full px-margin py-space-md max-w-7xl mx-auto">
+        <div class="bg-gradient-to-tr from-surface-container-low via-surface-container-lowest to-surface-container-low rounded-2xl p-space-lg md:p-space-xl shadow-sm border border-surface-container">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+            <div class="lg:col-span-7 flex flex-col gap-space-md">
+              <div class="flex items-center gap-2">
+                <span class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">calculate</span>
+                </span>
+                <div>
+                  <h3 class="font-title-md text-title-md text-on-surface font-bold">Kalkulator Dampak Donasi Pohon</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Geser untuk menghitung estimasi serapan emisi karbon dari pohon adopsimu.</p>
+                </div>
+              </div>
+              <div class="space-y-space-sm pt-space-xs">
+                <div class="flex justify-between items-center">
+                  <label class="font-label-md text-label-md text-on-surface font-semibold" for="tree-slider">Jumlah Bibit Pohon:</label>
+                  <span class="font-headline-sm text-headline-sm text-primary font-bold" id="slider-tree-count">5 Pohon</span>
+                </div>
+                <input class="w-full h-3 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" id="tree-slider" max="50" min="1" oninput="updateTreeImpact(this.value)" type="range" value="5"/>
+                <div class="flex justify-between text-xs text-on-surface-variant font-body-sm">
+                  <span>1 Pohon</span>
+                  <span>10 Pohon</span>
+                  <span>25 Pohon</span>
+                  <span>50 Pohon</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+                <div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm text-center">
+                  <span class="font-headline-sm text-headline-sm text-primary font-bold" id="impact-co2">142.5 kg</span>
+                  <div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">CO₂ Diserap/Tahun</div>
+                </div>
+                <div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm text-center">
+                  <span class="font-headline-sm text-headline-sm text-secondary font-bold" id="impact-motor">1.140 km</span>
+                  <div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Offset Emisi Motor</div>
+                </div>
+                <div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm text-center">
+                  <span class="font-headline-sm text-headline-sm text-tertiary font-bold" id="impact-ox">10 Orang</span>
+                  <div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Suplai Oksigen/Hari</div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-md border border-surface-container">
+              <div>
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Ringkasan Donasi</span>
+                <div class="flex items-baseline justify-between mt-space-xs">
+                  <span class="font-headline-md text-headline-md text-primary font-extrabold" id="impact-cost">Rp 125.000</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">atau 500 Poin Hijau</span>
+                </div>
+                <ul class="space-y-1.5 mt-space-md text-body-sm text-on-surface-variant">
+                  <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Termasuk sertifikat donasi digital atas namamu</li>
+                  <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Pelaporan foto &amp; monitoring satelit tiap 6 bulan</li>
+                  <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Dukungan bibit bersertifikat &amp; upah petani lokal</li>
+                </ul>
+              </div>
+              <button class="w-full h-12 bg-primary text-on-primary font-label-lg text-label-lg rounded-xl hover:bg-on-primary-fixed-variant transition-all flex items-center justify-center gap-2 shadow-md" onclick="openAdoptionModal('Paket Adopsi Pohon Nusantara', 5, 125000)" type="button">
+                <span class="material-symbols-outlined text-[20px]">nature_people</span>
+                <span>Adopsi Sekarang</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full px-margin py-space-lg max-w-7xl mx-auto" id="tree-catalog">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+          <div>
+            <div class="flex items-center gap-2 text-primary font-label-md text-label-md tracking-wider uppercase mb-1">
+              <span class="material-symbols-outlined text-sm">potted_plant</span>
+              <span>Koleksi Bibit Berkualitas</span>
+            </div>
+            <h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface">Pilih Bibit Pohon Asuh</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-1">Seluruh bibit dibudidayakan di pembibitan resmi dengan standar perakaran kuat.</p>
+          </div>
+          
+          <div class="w-full md:w-80">
+            <div class="relative flex items-center bg-surface-container-lowest rounded-xl shadow-sm p-1 border border-surface-container">
+              <span class="material-symbols-outlined text-outline ml-2 text-[20px]">search</span>
+              <input class="w-full bg-transparent px-2 py-1.5 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" id="catalog-search" onkeyup="filterCatalog()" placeholder="Cari jenis bibit (e.g. Tabebuya, Mangrove)..." type="text"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-space-lg">
+          <button class="cat-filter-btn px-4 py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary whitespace-nowrap shadow-sm transition-all" data-category="all" onclick="setTreeFilter(this, 'all')" type="button">
+            Semua Bibit
+          </button>
+          <button class="cat-filter-btn px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high whitespace-nowrap transition-all" data-category="peneduh" onclick="setTreeFilter(this, 'peneduh')" type="button">
+            Pohon Peneduh Kota
+          </button>
+          <button class="cat-filter-btn px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high whitespace-nowrap transition-all" data-category="mangrove" onclick="setTreeFilter(this, 'mangrove')" type="button">
+            Restorasi Mangrove
+          </button>
+          <button class="cat-filter-btn px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high whitespace-nowrap transition-all" data-category="buah" onclick="setTreeFilter(this, 'buah')" type="button">
+            Buah Produktif Warga
+          </button>
+          <button class="cat-filter-btn px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high whitespace-nowrap transition-all" data-category="hutan" onclick="setTreeFilter(this, 'hutan')" type="button">
+            Hutan Adat &amp; Konservasi
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="tree-grid">
+          
+          <article class="tree-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-surface-container/60" data-cat="peneduh">
+            <div class="relative h-52 w-full overflow-hidden bg-surface-container">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Tabebuya seedling with vibrant blooms and healthy roots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIp7DYAanrByAYN3Ynyre-paHwEmT2tEN4v_7bF9sa7FmvQtkO6xz7Ir5sLgQY76LLf3G7PifEvgo452iu1hUpIEWa9uA74HZJmIpne4jJcTUcuUueBPkhmLHXO2vZUgLyvgqiYFaGPQHeC8_GHBN6F7IQLZPcsKUOGT6ssaRr2e_IWgFUr-BpItYdn8l9cizjauFcXF5ZpV3x1uByzIqHaL8XNtkRN_4htKRsCy4Z3IduW8g0Pk2ptg"/>
+              <div class="absolute top-3 left-3 flex gap-1.5 flex-wrap">
+                <span class="px-2.5 py-1 rounded-full bg-surface-bright/90 backdrop-blur text-primary font-label-sm text-label-sm font-bold shadow-sm">
+                  Peneduh Kota
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-secondary-container/90 backdrop-blur text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                  Bunga Merah Muda
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-0.5 rounded-lg bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[15px] text-tertiary-fixed">eco</span> 28.5 kg CO₂/thn
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 justify-between">
+              <div>
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+                  <span>Handroanthus chrysotrichus</span>
+                  <span class="text-primary font-semibold">Tinggi: 60-80 cm</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                  Tabebuya Sakura Tropis
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2 line-clamp-2">
+                  Pohon peneduh jalan kota yang tahan polusi knalpot, mempercantik estetika perumahan, dan menyerap karbon secara optimal.
+                </p>
+                <div class="mt-space-sm p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between text-xs text-on-surface-variant">
+                  <span>Lokasi: Koridor Jalan Jakarta &amp; Surabaya</span>
+                  <span class="text-tertiary font-bold">Stok: 420 Bibit</span>
+                </div>
+              </div>
+              <div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center justify-between">
+                <div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant block">Biaya Adopsi</span>
+                  <span class="font-title-md text-title-md text-primary font-extrabold">Rp 25.000 <span class="font-body-sm text-xs font-normal text-on-surface-variant">/pohon</span></span>
+                </div>
+                <button class="px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-all shadow-sm flex items-center gap-1.5" onclick="openAdoptionModal('Tabebuya Sakura Tropis', 1, 25000)" type="button">
+                  <span class="material-symbols-outlined text-[18px]">add_task</span>
+                  <span>Adopsi</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tree-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-surface-container/60" data-cat="mangrove">
+            <div class="relative h-52 w-full overflow-hidden bg-surface-container">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Mangrove Rhizophora seedlings in coastal nursery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX2cyAFBM_YkgwlRihEtg2YiKsmeQ7Gli0rwsrXc2Qx0LzS4w1eKtVunfzTEwWgjGWnoQTnr5muLRZLaHvjZ-JDT1l_BP_d_wSUJDlsNnx2CqMOC3tKbOmZEy8tG1KAAvfbZU6dUQy_h2PugS-nc203ZTadTb7Z3IiOfisjuUosN4KJEBHm6rIr8wDqr8KbPAZafxFPg8kjjNSLbVcxSPZ4dGq_OBLto1BTxJ-wGtZEVbN4GYz-jxGBA"/>
+              <div class="absolute top-3 left-3 flex gap-1.5 flex-wrap">
+                <span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">
+                  Restorasi Pesisir
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-surface-bright/90 backdrop-blur text-primary font-label-sm text-label-sm font-semibold">
+                  Tahan Ombak
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-0.5 rounded-lg bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[15px] text-tertiary-fixed">eco</span> 45.0 kg CO₂/thn
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 justify-between">
+              <div>
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+                  <span>Rhizophora mucronata</span>
+                  <span class="text-primary font-semibold">Bibit Berakar Kokoh</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                  Bakau Mangrove Pesisir
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2 line-clamp-2">
+                  Benteng alami pencegah abrasi pantai utara Jawa dan penyerap karbon biru (blue carbon) hingga 4x lebih besar dari hutan darat.
+                </p>
+                <div class="mt-space-sm p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between text-xs text-on-surface-variant">
+                  <span>Lokasi: Teluk Jakarta &amp; Muara Gembong</span>
+                  <span class="text-tertiary font-bold">Stok: 850 Bibit</span>
+                </div>
+              </div>
+              <div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center justify-between">
+                <div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant block">Biaya Adopsi</span>
+                  <span class="font-title-md text-title-md text-primary font-extrabold">Rp 20.000 <span class="font-body-sm text-xs font-normal text-on-surface-variant">/pohon</span></span>
+                </div>
+                <button class="px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-all shadow-sm flex items-center gap-1.5" onclick="openAdoptionModal('Bakau Mangrove Pesisir', 1, 20000)" type="button">
+                  <span class="material-symbols-outlined text-[18px]">add_task</span>
+                  <span>Adopsi</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tree-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-surface-container/60" data-cat="peneduh hutan">
+            <div class="relative h-52 w-full overflow-hidden bg-surface-container">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Trembesi shade tree seedlings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfoIYdg4s8Tm2HHz9MSSGnT8XOV06gY8ppnzQra1Kx6-hb1U1yQU5UL2HLwT6UYBm0wmfN8cbactHqS305VBp4VOs-_qnLdzdy5PCy_OgSkDfH7POGrTZvPwtARNvl2Pf94x1xz52mEWzQ2hk64lHYyEQyEbrcAgaptCg3Z5nAdPATjtBb4DyBZ_qpq-3OvvhnCzfwhq1KcVF2odKvIEfT2pFXqBSvR1UEqjAR80zHMNHYIukp6MQzEA"/>
+              <div class="absolute top-3 left-3 flex gap-1.5 flex-wrap">
+                <span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold shadow-sm">
+                  Super Karbon
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-surface-bright/90 backdrop-blur text-primary font-label-sm text-label-sm font-semibold">
+                  Kanopi Rindang
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-0.5 rounded-lg bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[15px] text-tertiary-fixed">eco</span> 68.0 kg CO₂/thn
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 justify-between">
+              <div>
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+                  <span>Samanea saman</span>
+                  <span class="text-primary font-semibold">Tinggi: 70-100 cm</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                  Trembesi Hujan Emas
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2 line-clamp-2">
+                  Dikenal sebagai pohon penyerap karbon terunggul di dunia, membentuk kanopi rindang peneduh jalan raya dan resapan air alami.
+                </p>
+                <div class="mt-space-sm p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between text-xs text-on-surface-variant">
+                  <span>Lokasi: Hutan Kota Bandung &amp; Bogor</span>
+                  <span class="text-tertiary font-bold">Stok: 310 Bibit</span>
+                </div>
+              </div>
+              <div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center justify-between">
+                <div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant block">Biaya Adopsi</span>
+                  <span class="font-title-md text-title-md text-primary font-extrabold">Rp 30.000 <span class="font-body-sm text-xs font-normal text-on-surface-variant">/pohon</span></span>
+                </div>
+                <button class="px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-all shadow-sm flex items-center gap-1.5" onclick="openAdoptionModal('Trembesi Hujan Emas', 1, 30000)" type="button">
+                  <span class="material-symbols-outlined text-[18px]">add_task</span>
+                  <span>Adopsi</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tree-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-surface-container/60" data-cat="buah">
+            <div class="relative h-52 w-full overflow-hidden bg-surface-container">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Fruit nursery avocado grafted seedling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1wQuRfbC62m_HEhwZQnRdCsad9TJrea8Ftf_HTecCAIBREMT4ACDgtH6-__sxk1-WgBdNo-HVdGE1Tvq4tDzb-vb0t7BH1Bc8kj28kGmekpsC7cgkVllZbw5MfZuAEYgRXS2_rJ4efJnpzyuwCrFxLOHPrIISdS4pOvyrpg8vxK9_qVXR_aeTIuIU6LumCwNG4-HEL8oyU4fOYcxYwDP-i-7II4Kbe4tSYBz-q9H5zqJt3eH-GLdy9g"/>
+              <div class="absolute top-3 left-3 flex gap-1.5 flex-wrap">
+                <span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">
+                  Pangan Warga
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-surface-bright/90 backdrop-blur text-primary font-label-sm text-label-sm font-semibold">
+                  Okulasi Unggul
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-0.5 rounded-lg bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[15px] text-tertiary-fixed">eco</span> 22.0 kg CO₂/thn
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 justify-between">
+              <div>
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+                  <span>Persea americana</span>
+                  <span class="text-primary font-semibold">Cepat Berbuah</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                  Alpukat Aligator Unggul
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2 line-clamp-2">
+                  Diberikan ke kelompok tani pekarangan desa untuk meningkatkan ketahanan pangan lokal sekaligus penghijauan lahan kritis.
+                </p>
+                <div class="mt-space-sm p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between text-xs text-on-surface-variant">
+                  <span>Lokasi: Lahan Kelompok Tani Sukabumi</span>
+                  <span class="text-tertiary font-bold">Stok: 190 Bibit</span>
+                </div>
+              </div>
+              <div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center justify-between">
+                <div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant block">Biaya Adopsi</span>
+                  <span class="font-title-md text-title-md text-primary font-extrabold">Rp 35.000 <span class="font-body-sm text-xs font-normal text-on-surface-variant">/pohon</span></span>
+                </div>
+                <button class="px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-all shadow-sm flex items-center gap-1.5" onclick="openAdoptionModal('Alpukat Aligator Unggul', 1, 35000)" type="button">
+                  <span class="material-symbols-outlined text-[18px]">add_task</span>
+                  <span>Adopsi</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tree-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-surface-container/60" data-cat="hutan">
+            <div class="relative h-52 w-full overflow-hidden bg-surface-container">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Aquilaria native conservation saplings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXmkyw3r45nESRAsuawDZ8QLaEkcmDtcvqlYppV-c8wD1Dpnauc6ZcXE-TjmAkOG4qg1sOhSygCdMRZYIqgn5ffp3BWd9AR6Xh9gTWnD-glCcXlV98W4GFLnTR8BpnHOUJGy7xDLavvP0cJkrRUROUQ1FD85V-VAa2MOXwttZ-ZVoQcpqQKvlUhTx6E0u9WlTIo3eW4BhGVT00jjPgfjTiKWy0TOeG-ri9q7PKpcET-sSYnfDnTMOmTQ"/>
+              <div class="absolute top-3 left-3 flex gap-1.5 flex-wrap">
+                <span class="px-2.5 py-1 rounded-full bg-primary/20 text-primary font-label-sm text-label-sm font-bold shadow-sm">
+                  Endemik Terancam
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-surface-bright/90 backdrop-blur text-on-surface font-label-sm text-label-sm font-semibold">
+                  Hutan Lindung
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-0.5 rounded-lg bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[15px] text-tertiary-fixed">eco</span> 36.0 kg CO₂/thn
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 justify-between">
+              <div>
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+                  <span>Aquilaria malaccensis</span>
+                  <span class="text-primary font-semibold">Pohon Bernilai Tinggi</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                  Gaharu Hutan Malaccensis
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2 line-clamp-2">
+                  Program pemulihan keanekaragaman hayati hutan rimba Nusantara untuk melindungi jenis pohon langka bernilai ekologis tinggi.
+                </p>
+                <div class="mt-space-sm p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between text-xs text-on-surface-variant">
+                  <span>Lokasi: Taman Nasional Bukit Barisan</span>
+                  <span class="text-tertiary font-bold">Stok: 120 Bibit</span>
+                </div>
+              </div>
+              <div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center justify-between">
+                <div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant block">Biaya Adopsi</span>
+                  <span class="font-title-md text-title-md text-primary font-extrabold">Rp 50.000 <span class="font-body-sm text-xs font-normal text-on-surface-variant">/pohon</span></span>
+                </div>
+                <button class="px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-all shadow-sm flex items-center gap-1.5" onclick="openAdoptionModal('Gaharu Hutan Malaccensis', 1, 50000)" type="button">
+                  <span class="material-symbols-outlined text-[18px]">add_task</span>
+                  <span>Adopsi</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tree-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-surface-container/60" data-cat="peneduh">
+            <div class="relative h-52 w-full overflow-hidden bg-surface-container">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Kiara payung urban umbrella shade tree" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKbvDEIihi3uYXKloRPlVZYQtBBI7Xu5QrW7nCaPA65eADjfJgbk8e4x_L7YV5YoqpqaSVUF-9E_Yz20_hrNyy1NO6ko3FKnAkkIW23bASmYCZZEaL6_DaC5Qq6nAskvJEJ4jJcbbzSIqAHyDq5qspqQyqmgP8mtrsHsRnVR1RBRY_ctoXJgqKhVchZuz1HT1kROM9LF0erWYrTPO9Y8meqecCLTZc3ikPcyutUdxHjHSv_VkDuVSWRQ"/>
+              <div class="absolute top-3 left-3 flex gap-1.5 flex-wrap">
+                <span class="px-2.5 py-1 rounded-full bg-surface-bright/90 backdrop-blur text-primary font-label-sm text-label-sm font-bold shadow-sm">
+                  Peneduh Taman
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-secondary-container/90 backdrop-blur text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                  Akar Aman Saluran
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-0.5 rounded-lg bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[15px] text-tertiary-fixed">eco</span> 31.0 kg CO₂/thn
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 justify-between">
+              <div>
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+                  <span>Filicium decipiens</span>
+                  <span class="text-primary font-semibold">Tinggi: 60-90 cm</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                  Kiara Payung Rindang
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2 line-clamp-2">
+                  Pohon peneduh tropis dengan dedaunan menyerupai sirip pakis yang sangat lebat, ideal untuk halaman kantor dan ruang publik.
+                </p>
+                <div class="mt-space-sm p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between text-xs text-on-surface-variant">
+                  <span>Lokasi: RTH Tebet &amp; Jagakarsa</span>
+                  <span class="text-tertiary font-bold">Stok: 275 Bibit</span>
+                </div>
+              </div>
+              <div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center justify-between">
+                <div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant block">Biaya Adopsi</span>
+                  <span class="font-title-md text-title-md text-primary font-extrabold">Rp 25.000 <span class="font-body-sm text-xs font-normal text-on-surface-variant">/pohon</span></span>
+                </div>
+                <button class="px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-all shadow-sm flex items-center gap-1.5" onclick="openAdoptionModal('Kiara Payung Rindang', 1, 25000)" type="button">
+                  <span class="material-symbols-outlined text-[18px]">add_task</span>
+                  <span>Adopsi</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="w-full px-margin py-space-xl max-w-7xl mx-auto">
+        <div class="rounded-2xl bg-surface-container-low p-space-lg md:p-space-xl border border-surface-container shadow-sm">
+          <div class="flex flex-col lg:flex-row items-center gap-space-xl">
+            <div class="lg:w-1/2 flex flex-col gap-space-md">
+              <span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[20px]">pin_drop</span>
+                Transparansi Digital Tanpa Tipu-Tipu
+              </span>
+              <h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface font-bold">
+                Setiap Pohon Punya KTP Digital Sendiri
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Saat kamu mengadopsi pohon, sistem EcoSmart menerbitkan ID unik dengan tag GPS presisi. Petani lokal kami mengirimkan foto berkala dan sensor visual AI memvalidasi pertumbuhan kanopi.
+              </p>
+              <div class="space-y-3 pt-space-xs">
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+                    <span class="material-symbols-outlined text-[18px]">qr_code_2</span>
+                  </div>
+                  <div>
+                    <h4 class="font-label-md text-label-md text-on-surface font-bold">Plakat Nama &amp; Barcode Fisik</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Plakat bambu tahan cuaca terpasang di batang pohon dengan barcode dedikasi khusus.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0 mt-0.5">
+                    <span class="material-symbols-outlined text-[18px]">verified_user</span>
+                  </div>
+                  <div>
+                    <h4 class="font-label-md text-label-md text-on-surface font-bold">Sertifikat Emisi IPCC Terdaftar</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Sertifikat resmi bernomor seri yang dapat dilampirkan untuk audit ESG dan portofolio hijau pribadi.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:w-1/2 w-full">
+              <div class="p-6 md:p-8 rounded-2xl bg-surface-container-lowest border-2 border-primary/20 shadow-lg relative overflow-hidden">
+                <div class="absolute -right-8 -bottom-8 w-44 h-44 rounded-full bg-primary/5 pointer-events-none"></div>
+                <div class="flex items-center justify-between pb-4 border-b border-surface-container">
+                  <div class="flex items-center gap-2">
+                    <img alt="EcoSmart" class="h-6 w-auto" src="https://lh3.googleusercontent.com/aida/AEtjO1VxnTWcVeBO48LyD2YOdYj6Zkq7S2xj4yOcODQ6aLW-WCrXOuVxUuB7M2O-aU8p0ttdZ4ikQ32bQnTo2FdrMi_1QAMliJTTudpzfWqjEDDFvosE7AxlaIWjtlOs4F-QKn7catXdGLLl9ySII3gKkFrq7Lzxv3hEl7aaLzh19-ZwxS7uh7BrBev5BvygbJyL3ghekbNDSaaQqR_VKZIHKWIEiaRob9Uyp-_S0OnwvJjMv_WRN6CXwQ5uV-J4"/>
+                    <span class="font-title-md text-title-md font-bold text-primary">SERTIFIKAT ADOPSI POHON</span>
+                  </div>
+                  <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-bold">Terverifikasi</span>
+                </div>
+                <div class="py-4 space-y-3">
+                  <div>
+                    <span class="text-xs text-on-surface-variant uppercase tracking-wider block">Diberikan Kepada Adopter:</span>
+                    <span class="font-headline-sm text-title-md font-bold text-on-surface">Rian Nusantara</span>
+                  </div>
+                  <div class="grid grid-cols-2 gap-2 text-sm bg-surface-container-low p-3 rounded-xl font-body-sm">
+                    <div>
+                      <span class="text-xs text-on-surface-variant block">ID Pohon:</span>
+                      <strong class="text-primary font-mono">#ECO-TREE-94821</strong>
+                    </div>
+                    <div>
+                      <span class="text-xs text-on-surface-variant block">Spesies:</span>
+                      <strong>Mangrove Rhizophora #08</strong>
+                    </div>
+                    <div>
+                      <span class="text-xs text-on-surface-variant block">Koordinat GPS:</span>
+                      <strong class="font-mono text-xs">-6.0124° S, 106.9821° E</strong>
+                    </div>
+                    <div>
+                      <span class="text-xs text-on-surface-variant block">Estimasi Serapan CO₂:</span>
+                      <strong class="text-secondary">45.0 kg / tahun</strong>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between pt-2">
+                    <span class="text-xs text-on-surface-variant">Mitra: KTH Muara Lestari • Teluk Jakarta</span>
+                    <button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-variant text-primary font-label-sm text-xs font-bold flex items-center gap-1 transition-all" onclick="alert('📥 Mengunduh Sertifikat Digital PDF (Format Resmi EcoSmart)...')" type="button">
+                      <span class="material-symbols-outlined text-[16px]">download</span>
+                      <span>Unduh PDF</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300" id="adoptModal">
+        <div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-lg shadow-2xl flex flex-col gap-space-md transform scale-95 transition-transform duration-300">
+          <div class="flex items-center justify-between pb-2 border-b border-surface-container">
+            <div class="flex items-center gap-2 text-primary font-title-md text-title-md font-bold">
+              <span class="material-symbols-outlined text-[24px]">forest</span>
+              <span>Formulir Adopsi Pohon</span>
+            </div>
+            <button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeAdoptionModal()" type="button">
+              <span class="material-symbols-outlined text-[20px]">close</span>
+            </button>
+          </div>
+          <form class="space-y-space-md" id="adoptForm" onsubmit="event.preventDefault(); confirmAdoption();">
+            <div class="p-space-sm rounded-xl bg-surface-container-low flex justify-between items-center">
+              <div>
+                <span class="text-xs text-on-surface-variant uppercase block">Pohon Pilihan:</span>
+                <span class="font-title-md text-title-md font-bold text-on-surface" id="modal-tree-name">Tabebuya Sakura Tropis</span>
+              </div>
+              <div class="text-right">
+                <span class="text-xs text-on-surface-variant uppercase block">Total Biaya:</span>
+                <span class="font-headline-sm text-headline-sm font-extrabold text-primary" id="modal-tree-cost">Rp 25.000</span>
+              </div>
+            </div>
+            <div>
+              <label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Nama Pemilik / Atas Nama Adopter</label>
+              <input class="w-full h-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md focus:outline-none focus:bg-surface-container-lowest border border-surface-container" id="adopter-name" required="" type="text" value="Rian Nusantara"/>
+            </div>
+            <div>
+              <label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Kalimat Dedikasi di Plakat Fisik (Maks 60 Karakter)</label>
+              <input class="w-full h-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md focus:outline-none focus:bg-surface-container-lowest border border-surface-container" id="adopter-dedication" maxlength="60" placeholder="Contoh: Untuk masa depan hijau anak cucu kita" type="text" value="Tumbuh subur untuk kelestarian bumi Nusantara."/>
+            </div>
+            <div>
+              <label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Metode Pembayaran / Alokasi</label>
+              <select class="w-full h-11 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md border border-surface-container appearance-none focus:outline-none" id="adopter-payment">
+                <option value="qris">QRIS (GoPay, OVO, ShopeePay, BCA, Mandiri)</option>
+                <option value="points">Tukar Saldo Poin Hijau (1.420 Poin Tersedia)</option>
+                <option value="transfer">Virtual Account Bank</option>
+              </select>
+            </div>
+            <div class="flex items-center gap-2 pt-1">
+              <input checked="" class="accent-primary w-4 h-4" id="agree-terms" required="" type="checkbox"/>
+              <label class="font-body-sm text-xs text-on-surface-variant" for="agree-terms">Saya menyetujui program re-planting 3 tahun dan sertifikasi digital.</label>
+            </div>
+            <div class="flex items-center justify-end gap-space-sm pt-space-xs">
+              <button class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all" onclick="closeAdoptionModal()" type="button">
+                Batal
+              </button>
+              <button class="px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-all shadow-md flex items-center gap-1.5" type="submit">
+                <span class="material-symbols-outlined text-[18px]">verified</span>
+                <span>Konfirmasi &amp; Bayar</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.02)] mt-space-xl">
+    <div class="w-full px-margin py-space-xl">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-space-lg pb-space-lg">
+        <div class="flex flex-col items-center md:items-start gap-space-xs">
+          <div class="flex items-center gap-space-sm">
+            <img alt="EcoSmart Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VxnTWcVeBO48LyD2YOdYj6Zkq7S2xj4yOcODQ6aLW-WCrXOuVxUuB7M2O-aU8p0ttdZ4ikQ32bQnTo2FdrMi_1QAMliJTTudpzfWqjEDDFvosE7AxlaIWjtlOs4F-QKn7catXdGLLl9ySII3gKkFrq7Lzxv3hEl7aaLzh19-ZwxS7uh7BrBev5BvygbJyL3ghekbNDSaaQqR_VKZIHKWIEiaRob9Uyp-_S0OnwvJjMv_WRN6CXwQ5uV-J4"/>
+            <span class="font-title-md text-title-md text-primary font-bold">EcoSmart</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left max-w-sm">Pemberdayaan aksi iklim nyata melalui inovasi digital, edukasi mandiri, dan pelacakan jejak karbon kolaboratif.</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-space-lg">
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all px-space-sm py-1 rounded-lg" data-path="panduan-komunitas" href="#">EcoCommunity Guidelines</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all px-space-sm py-1 rounded-lg" data-path="api-data-lingkungan" href="#">API Data Lingkungan</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all px-space-sm py-1 rounded-lg" data-path="kontak-kemitraan-hijau" href="#">Kontak Kemitraan Hijau</a>
+        </div>
+      </div>
+      <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+        <span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 EcoSmart Nusantara. Seluruh hak cipta dilindungi.</span>
+        <div class="flex items-center gap-space-md">
+          <span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span> Sistem Data Aktif &amp; Terverifikasi</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/katalog-bibit.js"></script>
+</body>
+</html>
