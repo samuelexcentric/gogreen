@@ -16,14 +16,8 @@ body {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  /* Ensure mobile touch gestures can pan vertically without interference */
   touch-action: pan-y;
   -webkit-overflow-scrolling: touch;
-}
-
-/* Ensure hidden elements are strictly hidden and do not intercept touch */
-.hidden {
-  display: none !important;
 }
 
 /* Prevent horizontal overflow on main content wrapper without locking viewport scroll */
