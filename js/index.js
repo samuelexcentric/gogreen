@@ -46,6 +46,10 @@
       if (countLabel) {
         countLabel.textContent = 'Menampilkan ' + visibleCount + ' Modul Terkait';
       }
+      const catalogSection = document.getElementById('diy-catalog');
+      if (catalogSection) {
+        catalogSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     function filterByBudget() {
       const budgetBtn = document.querySelector('[data-filter="budget-0"]');

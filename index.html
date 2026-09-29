@@ -22,7 +22,7 @@
       <a href="index.html" class="flex items-center gap-space-md shrink-0 group">
         <img alt="EcoSmart Logo" class="h-14 w-auto object-contain transition-transform group-hover:scale-105" src="logo/logo invention.png"/>
         <div class="flex flex-col">
-          <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">EcoSmart</span>
+          <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Bhūmi</span>
           <span class="hidden sm:inline font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide uppercase">Digital Green Solutions</span>
         </div>
       </a>
@@ -110,7 +110,7 @@
           <div class="w-full max-w-2xl mt-space-xl">
             <div class="relative flex items-center bg-surface-container-lowest rounded-xl shadow-md p-1.5 transition-all focus-within:ring-2 focus-within:ring-primary">
               <span class="material-symbols-outlined text-outline ml-3 text-[22px]">search</span>
-              <input class="w-full bg-transparent px-3 py-2.5 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="diy-search-input" onkeyup="searchDIYCards()" placeholder="Cari metode (e.g. komposting, microgreens, vertikultur, biopori)..." type="text"/>
+              <input class="w-full bg-transparent px-3 py-2.5 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="diy-search-input" onkeyup="if(event.key==='Enter') searchDIYCards()" placeholder="Cari metode (e.g. komposting, microgreens, vertikultur, biopori)..." type="text"/>
               <button class="bg-primary text-on-primary px-space-md py-2.5 rounded-lg font-label-md text-label-md flex items-center gap-1 shrink-0 hover:bg-primary-container transition-colors" type="button" onclick="searchDIYCards()">
                 <span>Telusuri</span>
               </button>
