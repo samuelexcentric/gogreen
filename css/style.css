@@ -23,7 +23,6 @@ body {
 /* Prevent horizontal overflow on main content wrapper without locking viewport scroll */
 main {
   width: 100%;
-  overflow-x: hidden;
 }
 
 main > :first-child {
