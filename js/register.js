@@ -32,7 +32,7 @@ function toggleRegPassword() {
     }
     function simulateSocialRegister(provider) {
       alert(`🎉 Pendaftaran instan via ${provider} sukses!\nSelamat datang di EcoSmart. Bonus +100 Daun Emas telah ditambahkan ke akunmu.`);
-      window.location.href = 'ecotracker.html';
+      window.location.href = 'misi-harian.html';
     }
     function handleRegister() {
       const btn = document.getElementById('regSubmitBtn');
@@ -52,7 +52,7 @@ function toggleRegPassword() {
         btn.classList.add('bg-tertiary-container');
         alert(`🎉 Selamat Bergabung, ${name}!\n\nAkun relawan EcoSmart kamu telah aktif.\n+100 Daun Emas (Poin Hijau) berhasil diklaim dan pohon virtual perdanamu siap dirawat di EcoTracker.`);
         setTimeout(() => {
-          window.location.href = 'ecotracker.html';
+          window.location.href = 'misi-harian.html';
         }, 800);
       }, 1200);
     }

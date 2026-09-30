@@ -125,10 +125,10 @@
         setTimeout(() => toast.remove(), 300);
       }, 4500);
     }
-    let currentUserPoints = parseInt(localStorage.getItem('ecosmart_points') || '1420', 10);
+    let currentUserPoints = parseInt(localStorage.getItem('bhumi_points') || '1420', 10);
     function addPoints(amount, reason = '') {
       currentUserPoints += amount;
-      localStorage.setItem('ecosmart_points', currentUserPoints);
+      localStorage.setItem('bhumi_points', currentUserPoints);
       const badge = document.getElementById('headerPointsDisplay');
       if (badge) {
         badge.textContent = currentUserPoints.toLocaleString('id-ID') + ' Poin';
@@ -314,11 +314,11 @@ END:VCALENDAR`;
       const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = 'jadwal_siram_ecosmart.ics';
+      link.download = 'jadwal_siram_bhumi.ics';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      showToast('Unduhan Dimulai', 'File kalender jadwal_siram_ecosmart.ics berhasil diunduh.', 'download');
+      showToast('Unduhan Dimulai', 'File kalender jadwal_siram_bhumi.ics berhasil diunduh.', 'download');
     }
     function updateQuickCarbon() {
       const bottles = parseInt(document.getElementById('quickBottleRange').value, 10);
@@ -445,12 +445,12 @@ EKUIVALEN DAMPAK NYATA TERHADAP LINGKUNGAN:
 - Hemat energi listrik penerangan rumah tangga   : ${document.getElementById('auditEquivBulb').textContent}
 Terima kasih atas dedikasi nyata Anda dalam menjaga kelestarian bumi nusantara!
 EcoSmart - Digital Green Solutions
-https://ecosmart.nusantara.id
+https://bhumi.nusantara.id
 ==========================================================`;
       const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = `sertifikat_audit_karbon_ecosmart_${Date.now()}.txt`;
+      link.download = `sertifikat_audit_karbon_bhumi_${Date.now()}.txt`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

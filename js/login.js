@@ -12,7 +12,7 @@ function togglePasswordVisibility() {
     }
     function simulateSocialLogin(provider) {
       alert(`🔐 Masuk dengan ${provider}: Autentikasi berhasil! Mengarahkan ke EcoTracker...`);
-      window.location.href = 'ecotracker.html';
+      window.location.href = 'misi-harian.html';
     }
     function handleLogin() {
       const btn = document.getElementById('submitBtn');
@@ -31,7 +31,7 @@ function togglePasswordVisibility() {
         btn.classList.remove('bg-primary');
         btn.classList.add('bg-tertiary-container');
         setTimeout(() => {
-          window.location.href = 'ecotracker.html';
+          window.location.href = 'misi-harian.html';
         }, 1000);
       }, 1200);
     }
